@@ -1,0 +1,129 @@
+.modal-content {
+  width: 1200px;
+}
+.moduleMain {
+  display: flex;
+  height: 480px;
+  justify-content: space-between;
+}
+.moduleLeft {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  /* height: 480px; */
+  border-radius: 3px 0 0 3px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://www.ulcdn.net/media/subscription_popup/Colour-Crush-Sale-End-Pop-up.jpg?1648194184");
+}
+.moduleRight {
+  position: relative;
+  text-align: center;
+  padding: 0 65px 0 65px;
+}
+.closeButton {
+  position: absolute;
+  right: 15px;
+  /* margin-right: 15px; */
+  top: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}
+.header {
+  margin: 15px 0 0 0;
+  padding: 20px 0 10px 0;
+  font-family: "Mrs Eaves XL Serif", serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: #2f4858;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+.explore {
+  color: #5f5f5f;
+  font-size: 15px;
+  line-height: 16px;
+  padding: 8px 0 4px 0;
+  font-weight: normal;
+}
+.log {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.hr {
+  border-bottom: 1px solid #ed7745;
+  width: 50px;
+  display: block;
+  padding-top: 5px;
+  margin: 0 auto;
+}
+.input {
+  margin-top: 5px;
+  margin-bottom: 0 !important;
+  line-height: 13px;
+  height: 40px;
+  padding: 3px 7px;
+  font-size: 15px;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+}
+.input:focus {
+  outline: 1px solid #cccccc;
+}
+.forgetPass {
+  font-size: 13px;
+  position: relative;
+  top: -29px;
+  left: 120px;
+  color: #ed7745;
+  margin-right: 25px;
+}
+.logButton {
+  width: 100%;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: capitalize;
+  font-size: 16px;
+  margin-top: -6px;
+  padding: 7px 20px;
+  background-color: #ed7745;
+  color: white;
+  border: none;
+}
+.chooseSign {
+  margin-top: 8px;
+  font-size: 14px;
+}
+.social {
+  padding: 11px 20px;
+  color: #fff;
+  font-size: 14px;
+  margin: 8px;
+  height: 40px;
+  text-transform: capitalize;
+  font-weight: bold;
+  border: none;
+}
+.facebook {
+  background-color: #3a579d;
+}
+.google {
+  background-color: #db4934;
+}
+.social span {
+  padding: 11px 30px 11px 5px;
+  color: #fff;
+  margin: 10px auto;
+  text-transform: capitalize;
+  font-weight: bold;
+}
