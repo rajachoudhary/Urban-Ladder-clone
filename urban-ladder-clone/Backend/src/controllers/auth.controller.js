@@ -3,12 +3,12 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User.model");
 const passport = require("../configs/google-oauth");
 
-passport.serializeUser(function (user, done) {
-  done(null, user);
+passport.serializeUser(function (token, done) {
+  done(null, token);
 });
 
-passport.deserializeUser(function (user, done) {
-  done(null, user);
+passport.deserializeUser(function (token, done) {
+  done(null, token);
 });
 
 const router = express.Router();
@@ -21,14 +21,24 @@ router.get(
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    // successRedirect: "http://localhost:3000/",
+    // successRedirect: `${process.env.URL}/users/getToken`,
     failureRedirect: "/404",
   }),
   (req, res) => {
-    return res.redirect("/users/getToken");
+    return res.redirect(`http://localhost:3000/code=${req.token}`);
   }
 );
-
+router.get(
+  "/facebook",
+  passport.authenticate("facebook", { scope: ["email"] })
+);
+router.get(
+  "/facebook/callback",
+  passport.authenticate("facebook", { failureRedirect: "/login" }),
+  function (req, res) {
+    return res.redirect(`http://localhost:3000/code=${req.token}`);
+  }
+);
 const newToken = (user) => {
   return jwt.sign({ user }, process.env.SECRET_KEY);
 };

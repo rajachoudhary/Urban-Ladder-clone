@@ -3,6 +3,7 @@ const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const User = require("../models/User.model");
 const jwt = require("jsonwebtoken");
 const req = require("express/lib/request");
+const FacebookStrategy = require("passport-facebook").Strategy;
 const newToken = (user) => {
   return jwt.sign({ user }, process.env.SECRET_KEY);
 };
@@ -23,15 +24,39 @@ passport.use(
         user = await User.create({
           name: profile._json.name,
           email: profile._json.email,
-          roles: ["customer"],
         });
       }
-      console.log(user);
+      // console.log(user);
       let token = newToken(user);
       request.token = token;
       return done(null, token);
     }
     // callback with num and hte user object
+  )
+);
+
+passport.use(
+  new FacebookStrategy(
+    {
+      clientID: process.env.FACEBOOK_APP_ID,
+      clientSecret: process.env.FACEBOOK_APP_SECRET,
+      callbackURL: "http://localhost:8000/auth/facebook/callback",
+      profileFields: ["id", "emails", "name"],
+    },
+    async function (accessToken, refreshToken, profile, cb) {
+      console.log(profile);
+      let user = await User.findOne({ email: profile._json.email });
+      if (user) {
+        user = await User.findOne({ email: profile._json.email });
+      } else {
+        user = await User.create({
+          email: profile._json.email,
+        });
+      }
+      let token = newToken(user);
+      req.token = token;
+      return cb(null, token);
+    }
   )
 );
 
