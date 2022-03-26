@@ -1,10 +1,10 @@
 import React from "react";
-import { AuthenticateButton, Button } from "./Button";
+import { LogInButton } from "./LogInButton";
 
 export const Navbar = () => {
   return (
     <div>
-      <Button />
+      <LogInButton />
     </div>
   );
 };
