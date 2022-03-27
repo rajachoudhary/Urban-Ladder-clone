@@ -1,5 +1,4 @@
 import React from "react";
-
 import { BottomNavbar } from "./BottomNavbar";
 // import { AuthenticateButton, Button } from "./Button";
 import { MiddleNavbar } from "./MiddleNavbar";

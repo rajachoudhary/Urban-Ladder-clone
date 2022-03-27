@@ -4,7 +4,7 @@ import { Modal } from "react-bootstrap";
 import styles from "../css/LogIn.module.css";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { loginApi, registerApi } from "../Redux/User/userApi";
+import { loginApi, registerApi, socialApi } from "../Redux/User/userApi";
 import { useDispatch } from "react-redux";
 
 export function LogModal(props) {
@@ -121,18 +121,18 @@ export function LogModal(props) {
           <div className={styles.hr}></div>
           <button
             className={`${styles.social} ${styles.facebook}`}
-            onClick={() =>
-              (window.location.href = "http://localhost:8000/auth/facebook")
-            }
+            onClick={() => {
+              window.location.href = "http://localhost:8000/auth/facebook";
+            }}
           >
             <FontAwesomeIcon icon={faFacebookF} />
             <span>Connect</span>
             <FontAwesomeIcon icon={faAngleRight} />
           </button>
           <button
-            onClick={() =>
-              (window.location.href = "http://localhost:8000/auth/google")
-            }
+            onClick={() => {
+              window.location.href = "http://localhost:8000/auth/google";
+            }}
             className={`${styles.social} ${styles.google}`}
           >
             <FontAwesomeIcon icon={faGoogle} />

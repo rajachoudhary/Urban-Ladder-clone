@@ -3,6 +3,7 @@ import {
   USER_REQUEST,
   USER_SUCCESS,
   USER_LOGOUT,
+  USER_SOCIAL,
 } from "./user.actionType";
 
 export const USER_request = () => {
@@ -26,5 +27,10 @@ export const USER_failure = () => {
 export const USER_logout = () => {
   return {
     type: USER_LOGOUT,
+  };
+};
+export const USER_Social = () => {
+  return {
+    type: USER_SOCIAL,
   };
 };

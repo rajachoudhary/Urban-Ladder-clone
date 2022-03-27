@@ -9,7 +9,7 @@ import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { useDispatch } from "react-redux";
-import { logoutApi } from "../Redux/User/userApi";
+import { logoutApi, socialApi } from "../Redux/User/userApi";
 
 export const LogInButton = ({ id, open, anchorEl, onClose }) => {
   const [modalShow, setModalShow] = React.useState(false);
@@ -17,10 +17,11 @@ export const LogInButton = ({ id, open, anchorEl, onClose }) => {
   const [login, setLogin] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
+    socialApi()(dispatch);
     if (token !== "") {
       setModalShow(false);
     }
-  }, [token]);
+  });
   return (
     <div>
       <Popover
