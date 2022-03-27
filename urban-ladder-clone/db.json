@@ -1,0 +1,93 @@
+{
+    "posts": [
+      { "id": 1, "title": "json-server", "author": "typicode" }
+    ],
+    "comments": [
+      { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" },
+    "all_product":[
+        {"id":1,
+        "title" : "Baltoro High Glass Hydraulic Storage White Bed",
+        "sub_title" : "(King Bed Size, White Finish)",
+        "brand" : "By Urban Ladder",
+        "price" : 67999,
+        "discount_price" : 47599,
+        "emi" : 2286,
+        "img" : "https://www.ulcdn.net/images/products/155853/product/Baltoro_High_Gloss_Hydraulic_Storage_Bed_King_LP.jpg?1561442451"
+        },
+        {"id":2,
+            "title" : "Baltoro High Glass Hydraulic Storage White Bed",
+            "sub_title" : "(King Bed Size, White Finish)",
+            "brand" : "By Urban Ladder",
+            "price" : 67999,
+            "discount_price" : 47599,
+            "emi" : 2286,
+            "img" : "https://www.ulcdn.net/images/products/159172/product/Thorpe_Upholstered_Storage_Bed_Queen_LP.jpg?1510822520"
+            },
+            {"id":3,
+                "title" : "Baltoro High Glass Hydraulic Storage White Bed",
+                "sub_title" : "(King Bed Size, White Finish)",
+                "brand" : "By Urban Ladder",
+                "price" : 67999,
+                "discount_price" : 47599,
+                "emi" : 2286,
+                "img" : "https://www.ulcdn.net/images/products/159172/product/Thorpe_Upholstered_Storage_Bed_Queen_LP.jpg?1510822520"
+                },
+                {"id":4,
+                    "title" : "Baltoro High Glass Hydraulic Storage White Bed",
+                    "sub_title" : "(King Bed Size, White Finish)",
+                    "brand" : "By Urban Ladder",
+                    "price" : 67999,
+                    "discount_price" : 47599,
+                    "emi" : 2286,
+                    "img" : "https://www.ulcdn.net/images/products/159172/product/Thorpe_Upholstered_Storage_Bed_Queen_LP.jpg?1510822520"
+                },
+                {"id":5,
+                        "title" : "Baltoro High Glass Hydraulic Storage White Bed",
+                        "sub_title" : "(King Bed Size, White Finish)",
+                        "brand" : "By Urban Ladder",
+                        "price" : 67999,
+                        "discount_price" : 47599,
+                        "emi" : 2286,
+                        "img" : "https://www.ulcdn.net/images/products/159172/product/Thorpe_Upholstered_Storage_Bed_Queen_LP.jpg?1510822520"
+                    },
+                    {"id":6,
+                            "title" : "Baltoro High Glass Hydraulic Storage White Bed",
+                            "sub_title" : "(King Bed Size, White Finish)",
+                            "brand" : "By Urban Ladder",
+                            "price" : 67999,
+                            "discount_price" : 47599,
+                            "emi" : 2286,
+                            "img" : "https://www.ulcdn.net/images/products/159172/product/Thorpe_Upholstered_Storage_Bed_Queen_LP.jpg?1510822520"
+                        },
+                        {"id":7,
+                                "title" : "Baltoro High Glass Hydraulic Storage White Bed",
+                                "sub_title" : "(King Bed Size, White Finish)",
+                                "brand" : "By Urban Ladder",
+                                "price" : 67999,
+                                "discount_price" : 47599,
+                                "emi" : 2286,
+                                "img" : "https://www.ulcdn.net/images/products/159172/product/Thorpe_Upholstered_Storage_Bed_Queen_LP.jpg?1510822520"
+                            },
+                            {"id":8,
+                                    "title" : "Baltoro High Glass Hydraulic Storage White Bed",
+                                    "sub_title" : "(King Bed Size, White Finish)",
+                                    "brand" : "By Urban Ladder",
+                                    "price" : 67999,
+                                    "discount_price" : 47599,
+                                    "emi" : 2286,
+                                    "img" : "https://www.ulcdn.net/images/products/159172/product/Thorpe_Upholstered_Storage_Bed_Queen_LP.jpg?1510822520"
+                            },
+                            {"id":9,
+                                "title" : "Baltoro High Glass Hydraulic Storage White Bed",
+                                "sub_title" : "(King Bed Size, White Finish)",
+                                "brand" : "By Urban Ladder",
+                                "price" : 67999,
+                                "discount_price" : 47599,
+                                "emi" : 2286,
+                                "img" : "https://www.ulcdn.net/images/products/159172/product/Thorpe_Upholstered_Storage_Bed_Queen_LP.jpg?1510822520"
+                        }
+    
+    ]
+  }
