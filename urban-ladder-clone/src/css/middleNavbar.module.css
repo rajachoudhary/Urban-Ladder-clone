@@ -1,0 +1,33 @@
+.middleNavbarContainer{
+    display: flex;
+    justify-content: space-around;
+    width: 66%;
+    margin: auto;
+    padding: 6px 0;
+    padding-bottom: 15px
+}
+.middleNavbarContainer >div:nth-child(1){
+    display: flex;
+    gap: 0.5rem;
+    
+}
+.middleNavbarContainer>div:nth-child(2)>input{
+    /* border:1px solid black; */
+    width: 650px;
+    padding: 10px;
+   border: 1px solid rgb(231, 225, 225);
+   height: 40px;
+   margin-left: 50px;
+   margin: auto;
+}
+.middleNavbarContainer>div:nth-child(3){
+    /* border:1px solid black; */
+    display: flex;
+    gap: 1rem;
+    margin-top: 5px;
+    /* border: 1px solid black; */
+
+}
+.footerLine{
+border: 1px solid rgb(241, 238, 238);
+}
