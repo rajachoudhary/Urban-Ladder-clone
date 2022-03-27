@@ -3,6 +3,7 @@ import {
   USER_REQUEST,
   USER_SUCCESS,
   USER_LOGOUT,
+  USER_SOCIAL,
 } from "./user.actionType";
 
 const initState = {
@@ -43,6 +44,13 @@ export const User_reducer = (state = initState, { type, payload }) => {
         isError: false,
       };
     }
+    case USER_SOCIAL:
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+        token: localStorage.getItem("accesstoken"),
+      };
     default:
       return state;
   }

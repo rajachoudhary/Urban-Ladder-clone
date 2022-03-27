@@ -5,6 +5,7 @@ import {
   USER_request,
   USER_success,
   USER_logout,
+  USER_Social,
 } from "./user.action";
 
 // const dispatch = useDispatch();
@@ -31,7 +32,7 @@ export const registerApi = (params) => (dispatch) => {
       password: params.pass,
     })
     .then((res) => {
-      console.log(res);
+      console.log("login", res);
       dispatch(USER_success(res.data.token));
     })
     .catch((res) => {
@@ -40,4 +41,7 @@ export const registerApi = (params) => (dispatch) => {
 };
 export const logoutApi = (params) => (dispatch) => {
   dispatch(USER_logout());
+};
+export const socialApi = (params) => (dispatch) => {
+  dispatch(USER_Social());
 };
