@@ -10,13 +10,10 @@
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
-<<<<<<< HEAD
     "@mui/icons-material": "^5.5.1",
     "@mui/material": "^5.5.2",
     "@mui/styled-engine-sc": "^5.5.2",
-=======
     "@mui/material": "^5.5.2",
->>>>>>> c104e63d2f3eb6ed76e40326251a9a46b7d3b654
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
