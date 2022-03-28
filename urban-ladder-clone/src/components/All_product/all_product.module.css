@@ -77,3 +77,28 @@
   background: #e44079;
   box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
 }
+
+
+/*filter  */
+.parameter{
+ background-color: #ed7745;
+ color: white;
+ border-radius: 4px;
+ padding: 0.5vh;
+ font-size: 12px;
+}
+.parameter button{
+  background-color:#ed7745 ;
+  border-radius: 0.5vh;
+border: none;
+}
+.recommend_btn{
+  border : 1px solid gray;
+  padding: 0.5vh;
+  border-radius: 0.5vh;
+  
+}
+.recommend_btn > button{
+  border : none;
+  background-color: white;
+}

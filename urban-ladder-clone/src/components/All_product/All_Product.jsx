@@ -5,7 +5,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import { allProductApi } from '../../Redux/Allproduct/productApi';
 import { ProductCard } from './ProductCard';
 import styles from "./all_product.module.css";
-import { Filter } from './Filter';
+import { Filter } from './filter/Filter';
 export const All_Product = () => {
     const [data,setData] = useState();
     const dispatch = useDispatch();
