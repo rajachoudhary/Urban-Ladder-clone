@@ -6,19 +6,15 @@ const connect = require("./configs/db");
 const authController = require("./controllers/auth.controller");
 const userController = require("./controllers/user.controller");
 const productController = require("./controllers/product.controller");
+const cartController = require("./controllers/cart.controller");
 
 let app = express();
 app.use(express.json());
-app.use(
-  cors({
-    origin: "http:localhost:3000",
-    methods: "GET,POST,PATCH,DELETE",
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use("/auth", authController);
 app.use("/users", userController);
 app.use("/products", productController);
+app.use("/cart", cartController);
 
 app.listen(process.env.PORT, async () => {
   try {
