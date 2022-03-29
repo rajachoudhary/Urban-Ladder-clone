@@ -12,7 +12,7 @@ import {
 export const loginApi = (params) => (dispatch) => {
   dispatch(USER_request());
   axios
-    .post("http://localhost:8000/auth/login", {
+    .post("https://urbanladderclone.herokuapp.com/api/auth/login", {
       email: params.email,
       password: params.pass,
     })
@@ -27,7 +27,7 @@ export const loginApi = (params) => (dispatch) => {
 export const registerApi = (params) => (dispatch) => {
   dispatch(USER_request());
   axios
-    .post("http://localhost:8000/auth/register", {
+    .post("https://urbanladderclone.herokuapp.com/api/auth/register", {
       email: params.email,
       password: params.pass,
     })
