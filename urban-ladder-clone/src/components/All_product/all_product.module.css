@@ -18,7 +18,7 @@
   height: 450px;
  position: relative;
   border: 10px solid hsla(0, 0%, 100%, 0.973);
-  
+  position: relative;
     
 }
 .prod_card:hover {
@@ -26,6 +26,14 @@
    width: 280px;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  
+  }
+  .heart{
+    position: absolute;
+    color:#ed7745;
+   margin-top: 2vh;
+    margin-left: 90%;
+    margin-right: 5%;
+    font-size: 20px;
   }
   .prod_card:hover .btn_div{
     display: flex;
@@ -101,4 +109,18 @@ border: none;
 .recommend_btn > button{
   border : none;
   background-color: white;
+}
+.recommends{
+  padding: 2vh;
+  margin: 1vh;
+  cursor: pointer;
+
+  
+}
+.recommends >p{
+  padding: 0.5vh;
+}
+.recommends> p:hover{
+  background-color: rgb(150, 146, 146);
+  
 }

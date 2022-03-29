@@ -10,14 +10,25 @@ export const All_Product = () => {
     const [data,setData] = useState();
     const dispatch = useDispatch();
     const {all_product} = useSelector((state)=>state.allproduct_reducer )
+    const handleFilter = (logic)=>{
+      console.log("logic",logic)
+      if(logic =="lowToHigh"){
+        dispatch(allProductApi(1))
+      }
+      if(logic == "highToLow"){
+        dispatch(allProductApi(-1))
+      }
+
+    }
     useEffect(()=>{
         dispatch(allProductApi())
     },[])
+   
   return (
     <>
     
    
-    <Filter/>
+    <Filter handleFilter={handleFilter}/>
     <div className={styles.prod_main}>
      
     

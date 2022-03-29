@@ -11,7 +11,8 @@ import { Finish } from './Finish';
 import { Price } from './Price';
 import styles from "../all_product.module.css"
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-export const Filter = () => {
+import { Recommends } from './Recommends';
+export const Filter = ({handleFilter}) => {
    
   return (
     <div style={{display:"flex",justifyContent:"space-between",width:"950px",margin:"auto",fontSize:"12px"}}>
@@ -29,7 +30,7 @@ export const Filter = () => {
                    
             </div>
               <div  className={styles.parameter}>
-                 <Tippy offset={[150,17]} theme="light"  content={<Feature></Feature>}  interactive={true}>
+                 <Tippy offset={[60,19]} theme="light"  content={<Feature></Feature>}  interactive={true}>
                    <span>
                    <button>Feature</button>
                      <ArrowDropDownIcon></ArrowDropDownIcon>
@@ -40,7 +41,7 @@ export const Filter = () => {
                   
               </div>
               <div  className={styles.parameter}>
-                <Tippy offset={[150,17]} theme="light" content={<Material></Material>} interactive={true} >
+                <Tippy offset={[60,19]}  theme="light" content={<Material></Material>} interactive={true} >
                 <span>
                    <button>Material</button>
                      <ArrowDropDownIcon/>
@@ -49,7 +50,7 @@ export const Filter = () => {
                 </Tippy>
               </div>
               <div  className={styles.parameter}>
-                <Tippy offset={[150,17]} theme="light" content={<Finish></Finish>} interactive={true} >
+                <Tippy offset={[60,19]}  placement= "bottom"  theme="light" content={<Finish></Finish>} interactive={true} >
                 <span>
                    <button>Finish</button>
                      <ArrowDropDownIcon/>
@@ -59,7 +60,7 @@ export const Filter = () => {
                 </Tippy>
               </div>
               <div  className={styles.parameter}>
-                <Tippy offset={[150,17]} theme="light" content={<Size></Size>} interactive={true} >
+                <Tippy offset={[10,19]} placement= "bottom" theme="light" content={<Size></Size>} interactive={true}  >
                 <span>
                    <button>Size</button>
                      <ArrowDropDownIcon/>
@@ -69,7 +70,7 @@ export const Filter = () => {
                 </Tippy>
               </div>
               <div  className={styles.parameter}>
-                <Tippy offset={[150,17]} theme="light" content={<Brand></Brand>} interactive={true} >
+                <Tippy offset={[60,19]} theme="light" content={<Brand></Brand>} interactive={true} >
                 <span>
                    <button>Brand</button>
                      <ArrowDropDownIcon/>
@@ -88,10 +89,10 @@ export const Filter = () => {
                       <input type="checkbox"/>
                       <p style={{margin:"0px"}}>Exclude Out Of Stock</p>
                     </span>
-                  <Tippy offset={[10,1]}  placement= "bottom" theme="light"  content={<Price></Price>} interactive={true} >
+                  <Tippy   offset={[20,10]}  placement= "bottom" theme="light"  content={<Recommends handleFilter={handleFilter}></Recommends>} interactive={true}  >
                         <span className={styles.recommend_btn}>
                         <button>Recommended</button>
-                         <ArrowDropDownIcon></ArrowDropDownIcon>
+                         <ArrowDropDownIcon/>
                         </span>
                         
                   </Tippy>
