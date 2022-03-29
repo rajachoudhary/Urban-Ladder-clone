@@ -1,0 +1,6 @@
+.carousel-control-next,.carousel-control-prev{
+    width: 2% !important;
+    background-color: rgb(248, 244, 244) !important;
+    height: 50px;
+    margin-top: 20%;
+  }

@@ -2,7 +2,7 @@ const express = require("express");
 const { authenticate } = require("../middlewares/authenticate.middleware");
 const authorize = require("../middlewares/authorize.middleware");
 
-const Entry = require("../models/entry.model");
+const Entry = require("../../src/models/entry.model");
 
 const router = express.Router();
 

@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect } from "react";
 import { Modal } from "react-bootstrap";
-import styles from "../css/LogIn.module.css";
+import styles from "../../css/LogIn.module.css";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { loginApi, registerApi, socialApi } from "../Redux/User/userApi";
+import { loginApi, registerApi, socialApi } from "../../Redux/User/userApi";
 import { useDispatch } from "react-redux";
 
 export function LogModal(props) {
@@ -122,7 +122,8 @@ export function LogModal(props) {
           <button
             className={`${styles.social} ${styles.facebook}`}
             onClick={() => {
-              window.location.href = "http://localhost:8000/auth/facebook";
+              window.location.href =
+                "https://urbanladderclone.herokuapp.com/api/auth/facebook";
             }}
           >
             <FontAwesomeIcon icon={faFacebookF} />
@@ -131,7 +132,8 @@ export function LogModal(props) {
           </button>
           <button
             onClick={() => {
-              window.location.href = "http://localhost:8000/auth/google";
+              window.location.href =
+                "https://urbanladderclone.herokuapp.com/api/auth/google";
             }}
             className={`${styles.social} ${styles.google}`}
           >

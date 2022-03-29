@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { LogModal } from "./LogModal";
-import styles from "../css/LogIn.module.css";
+import styles from "../../css/LogIn.module.css";
 import Popover from "@mui/material/Popover";
 import Typography from "@mui/material/Typography";
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { useDispatch } from "react-redux";
-import { logoutApi, socialApi } from "../Redux/User/userApi";
+import { logoutApi, socialApi } from "../../Redux/User/userApi";
 
 export const LogInButton = ({ id, open, anchorEl, onClose }) => {
   const [modalShow, setModalShow] = React.useState(false);
