@@ -5,6 +5,7 @@ export const ProductCard = ({item}) => {
   return (
       <>
  <div className={styles.prod_card}>
+     <div className={styles.ribbon}>20% off</div>
      <div className={styles.prod_img}>
      <img  style={{  width: "100%"}} src={img}/>
      </div>

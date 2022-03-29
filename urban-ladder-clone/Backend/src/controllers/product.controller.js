@@ -6,11 +6,9 @@ const Product = require("../models/product.model");
 
 const router = express.Router();
 
-router.post("", authenticate, async (req, res) => {
+router.post("", async (req, res) => {
   try {
-    const product = await Product.create({
-      ...req.body,
-    });
+    const product = await Product.insertMany([...req.body]);
 
     return res.send(product);
   } catch (err) {
@@ -20,17 +18,35 @@ router.post("", authenticate, async (req, res) => {
 
 router.get("", async (req, res) => {
   try {
-    const products = await Product.find();
-
-    return res.send(products);
+    const { category, page, limit, id, brand, sort } = req.query;
+    let constraint = {};
+    if (category) {
+      constraint.category = category;
+    }
+    if (brand) {
+      constraint.brand = brand;
+    }
+    if (id) {
+      constraint.id = id;
+    }
+    console.log(constraint);
+    const offset = (page - 1) * limit || 0;
+    const limitTotal = limit || 5;
+    const products = await Product.find(constraint)
+      .skip(offset)
+      .limit(limitTotal)
+      .sort({ priceSort: sort });
+    const count = await Product.find(constraint).countDocuments();
+    console.log(count);
+    return res.send({ count: count, products });
   } catch (err) {
     return res.status(500).send({ message: err.message });
   }
 });
 
-router.get(":id", authenticate, async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
-    let id = req.params;
+    let { id } = req.params;
     const products = await Product.find({ _id: id });
 
     return res.send(products);
