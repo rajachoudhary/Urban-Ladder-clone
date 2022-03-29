@@ -1,4 +1,4 @@
-const Product = require("../models/product.model");
+const Product = require("../../src/models/product.model");
 module.exports = () => async (req, res, next) => {
   let permission = false;
   const { id } = req.params;

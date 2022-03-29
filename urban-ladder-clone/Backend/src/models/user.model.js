@@ -7,15 +7,6 @@ const userSchema = new mongoose.Schema(
     mobile: { type: Number },
     email: { type: String, required: true, unique: true },
     password: { type: String },
-    // cart: [
-    //   { type: mongoose.Schema.Types.ObjectId, ref: "item", required: true },
-    // ],
-    // wishlist: [
-    //   { type: mongoose.Schema.Types.ObjectId, ref: "item", required: true },
-    // ],
-    // orders: [
-    //   { type: mongoose.Schema.Types.ObjectId, ref: "order", required: true },
-    // ],
   },
   { versionKey: false, timestamps: true }
 );
