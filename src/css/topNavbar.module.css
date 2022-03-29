@@ -1,0 +1,25 @@
+.topNavbarContainer {
+  width: 66%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  font-size: 13px;
+  gap: 1rem;
+}
+.topNavbarContainer > div {
+  display: flex;
+}
+.topNavbarContainer > div > div {
+  display: flex;
+  padding: 10px 10px 0 10px;
+  gap: 0.5rem;
+}
+.topNavbarHr {
+  margin-top: 7px;
+  color: rgb(212, 209, 209);
+}
+
+.topNavbarContainer >div >div:hover {
+  cursor: pointer;
+  fill: #ed7745;
+}

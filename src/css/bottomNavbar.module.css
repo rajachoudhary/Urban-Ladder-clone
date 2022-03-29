@@ -1,0 +1,59 @@
+.bottomNavbarContainer {
+  width: 66%;
+  display: flex;
+  gap: 2rem;
+  border: none;
+  margin: auto;
+
+}
+.button {
+  border: none;
+  padding: 10px;
+}
+.button :hover {
+  color: #f9913d;
+  border-bottom: 15px #f9913d;
+  text-decoration: underline 2px;
+  text-underline-offset: 15px;
+}
+
+.bottomNavbarHover{
+  display: flex;
+  margin-top: 12px;
+  
+ 
+}
+.bottomNavbarHover:hover{
+  color: #f9913d;
+}
+.hoverHeading{
+  color: #2F4858;
+  font-weight: 600;
+  
+}
+.hoverHeading:hover{
+  color: #f9913d !important;
+  border-bottom: 10px #f9913d;
+  text-decoration: underline 2px;
+  text-underline-offset: 5px;
+}
+.menuItem:hover{
+  background-color: white;
+  color: #f9913d !important;
+}
+.menuItem{
+  padding: 3px;
+ 
+}
+a{
+  text-decoration: none !important;
+}
+
+.verticleLine{
+  margin-top: 50px;
+  height: 350px;
+  border-left: 1px solid rgb(232, 235, 232);
+ margin-bottom: 0;
+ 
+ 
+}
