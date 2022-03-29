@@ -1,11 +1,11 @@
 import React from "react";
-import style from "../css/middleNavbar.module.css";
-import { ReactComponent as LogoBox } from "../svgFiles/logoBox.svg";
-import { ReactComponent as UrbanLadder } from "../svgFiles/urbanLadder.svg";
-import { ReactComponent as TrackItem } from "../svgFiles/trackItem.svg";
-import { ReactComponent as User } from "../svgFiles/user.svg";
-import { ReactComponent as Like } from "../svgFiles/like.svg";
-import { ReactComponent as Cart } from "../svgFiles/cart.svg";
+import style from "../../css/middleNavbar.module.css";
+import { ReactComponent as LogoBox } from "../../svgFiles/logoBox.svg";
+import { ReactComponent as UrbanLadder } from "../../svgFiles/urbanLadder.svg";
+import { ReactComponent as TrackItem } from "../../svgFiles/trackItem.svg";
+import { ReactComponent as User } from "../../svgFiles/user.svg";
+import { ReactComponent as Like } from "../../svgFiles/like.svg";
+import { ReactComponent as Cart } from "../../svgFiles/cart.svg";
 import { LogInButton } from "./LogInButton";
 
 export const MiddleNavbar = () => {
@@ -32,21 +32,21 @@ export const MiddleNavbar = () => {
           <input placeholder="Search" />
         </div>
         <div className={style.hoverColorChange}>
-          <TrackItem />
-          <User
+          <TrackItem className={style.onHoverColorChange}/>
+          <User className={style.onHoverColorChange}
             // className={anchorEl === null ? style.icons2 : style.icon2hover}
             onMouseEnter={(e) => handleClick(e)}
           />
-          <LogInButton
+          <Like className={style.onHoverColorChange}/>
+          <Cart className={style.onHoverColorChange}/>
+        </div>
+      </div>
+      <LogInButton
             id={id}
             open={open}
             anchorEl={anchorEl}
             onClose={handleClose}
           />
-          <Like />
-          <Cart />
-        </div>
-      </div>
       <div className={style.footerLine}></div>
     </>
   );
