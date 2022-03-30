@@ -3,12 +3,10 @@ import { Carousel } from "react-bootstrap";
 import "../../css/homePageBanner.css"
 import style from "../../css/homePageBanner.module.css"
 export const HomePageBanner = () => {
-  const carouselDot = {
-    dots:true
-  }
+  
   return (
     <div className={style.bannerImageContainer} >
-         <Carousel variant="dark" {...carouselDot} style={{paddingBottom:"0"}}>
+         <Carousel variant="dark"style={{paddingBottom:"0"}}>
         <Carousel.Item>
           <img
             className="d-block w-100 bannerImage"
