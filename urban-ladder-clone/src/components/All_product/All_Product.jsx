@@ -6,7 +6,7 @@ import { allProductApi } from '../../Redux/Allproduct/productApi';
 import { ProductCard } from './ProductCard';
 import styles from "./all_product.module.css";
 import { Filter } from './filter/Filter';
-import { ExploreSlider } from '../LandingPage/ExploreSlider';
+import { ExploreSlider } from '../LandingPage/PopularSlider';
 export const All_Product = () => {
     const [data,setData] = useState();
     const dispatch = useDispatch();

@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Slider from '@material-ui/core/Slider';
-
+// import Slider from '@material-ui/core/Slider';
+import Slider from '@mui/material/Slider';
 const useStyles = makeStyles({
 //   root: {
 //     width: '200px',
@@ -23,7 +23,7 @@ const SliderProton = ({ value, changePrice }) => {
 
   return (
     <div style={{width:"200px"}}>
-      <Slider
+      {/* <Slider
         value={value}
         onChange={changePrice}
         valueLabelDisplay='on'
@@ -34,6 +34,14 @@ const SliderProton = ({ value, changePrice }) => {
           rail: classes.rail,
           track: classes.track,
         }}
+      /> */}
+      <Slider
+     
+        value={value}
+        onChange={changePrice}
+        valueLabelDisplay='on'
+        min={1000}
+        max={4000}
       />
     </div>
   );
