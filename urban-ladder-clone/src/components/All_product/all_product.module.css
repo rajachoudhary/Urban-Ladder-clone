@@ -74,8 +74,8 @@
   --t: 10px; /* the top offset */
 
   position: absolute;
-  inset: var(--t)  auto auto calc(-1*var(--f));
-  padding: 0 10px var(--f) calc(10px + var(--r));
+  inset: var(--t) auto auto  calc(-1*var(--f)  );
+  padding: 0  var(--f)  calc(10px + var(--r) 10px);
   clip-path: 
     polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
       calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
