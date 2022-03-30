@@ -20,44 +20,44 @@ export const PopularSlider = () => {
     const sliderSettings = {
       // ...
       
-      slidesToShow: 4,
+      slidesToShow: 3,
       lazyLoad: false,
-      slidesToScroll: 4,
+      slidesToScroll: 3,
       infinite: true,
       arrows: false,
       speed: 100, // ms
       autoplay: false,
       initialSlide: 5,
-      // responsive: [
-      //   {
-      //     breakpoint: 1168,
-      //     settings: {
-      //       slidesToShow: 4,
-      //       slidesToScroll: 4,
-      //     }
-      //   },
-      //   {
-      //     breakpoint: 1024,
-      //     settings: {
-      //       slidesToShow: 4,
-      //       slidesToScroll: 4,
-      //     }
-      //   },
-      //   {
-      //     breakpoint: 868,
-      //     settings: {
-      //       slidesToShow:4,
-      //       slidesToScroll: 3,
-      //     }
-      //   },
-      //   {
-      //     breakpoint: 568,
-      //     settings: {
-      //       slidesToShow: 4,
-      //       slidesToScroll: 3,
-      //     }
-      //   }
-      // ],
+      responsive: [
+        {
+          breakpoint: 1168,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        },
+        {
+          breakpoint: 868,
+          settings: {
+            slidesToShow:3,
+            slidesToScroll: 3,
+          }
+        },
+        {
+          breakpoint: 568,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        }
+      ],
     };
   
     const settings = {
