@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from "react-slick";
+import "../../App.css"
 import style from "../../css/popularSlider.module.css"
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import "slick-carousel/slick/slick.css";
@@ -20,43 +21,43 @@ export const PopularSlider = () => {
       // ...
       
       slidesToShow: 4,
-      lazyLoad: true,
+      lazyLoad: false,
       slidesToScroll: 4,
-      infinite: false,
+      infinite: true,
       arrows: false,
-      speed: 900, // ms
+      speed: 100, // ms
       autoplay: false,
       initialSlide: 5,
-      responsive: [
-        {
-          breakpoint: 1168,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4,
-          }
-        },
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4,
-          }
-        },
-        {
-          breakpoint: 868,
-          settings: {
-            slidesToShow:4,
-            slidesToScroll: 3,
-          }
-        },
-        {
-          breakpoint: 568,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 3,
-          }
-        }
-      ],
+      // responsive: [
+      //   {
+      //     breakpoint: 1168,
+      //     settings: {
+      //       slidesToShow: 4,
+      //       slidesToScroll: 4,
+      //     }
+      //   },
+      //   {
+      //     breakpoint: 1024,
+      //     settings: {
+      //       slidesToShow: 4,
+      //       slidesToScroll: 4,
+      //     }
+      //   },
+      //   {
+      //     breakpoint: 868,
+      //     settings: {
+      //       slidesToShow:4,
+      //       slidesToScroll: 3,
+      //     }
+      //   },
+      //   {
+      //     breakpoint: 568,
+      //     settings: {
+      //       slidesToShow: 4,
+      //       slidesToScroll: 3,
+      //     }
+      //   }
+      // ],
     };
   
     const settings = {
@@ -68,34 +69,35 @@ export const PopularSlider = () => {
       autoplaySpeed: 3000,
       slidesToShow: 4,
       slideToScroll: 5,
-      infinite: false,
+      infinite: true,
     };
   
     return(
+      
         <div className={style.popularContainer}>   
-                <button 
-                    onClick={sliderRef?.slickPrev}
-                    className={style.leftSliderbuttton}
-                >
-                    <FiChevronRight className={style.leftButton} />
-                </button>
-                <button
-                    onClick={sliderRef?.slickNext}
-                    className={style.rightSliderButtton}
-                >
-                    <FiChevronLeft />
-                </button>
-                <div className={style.exploreHeading}>Popular Across Site</div>
-                <div className={style.headingUnderLine}></div>
-                <Slider ref={setSliderRef} {...sliderSettings} {...settings} className={style.popularSubContainer} >
-                   {
-                       all_product.map((item)=>{
-                           return(
-                               <PopularSliderCard item={item}  />
-                           )
-                       })
-                   }
-                </Slider>
+          <button 
+              onClick={sliderRef?.slickPrev}
+              className={style.leftSliderbuttton}
+          >
+              <FiChevronRight />
+          </button>
+          <button
+              onClick={sliderRef?.slickNext}
+              className={style.rightSliderButtton}
+          >
+              <FiChevronLeft />
+          </button>
+          <div className={style.exploreHeading}>Popular Across Site</div>
+          <div className={style.headingUnderLine}></div>
+          <Slider ref={setSliderRef} {...sliderSettings} {...settings} className={style.popularSubContainer} >
+              {
+                  all_product.map((item)=>{
+                      return(
+                          <PopularSliderCard item={item}  />
+                      )
+                  })
+              }
+          </Slider>
          </div>
     )
 }
