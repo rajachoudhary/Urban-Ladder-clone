@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useDispatch,useSelector } from 'react-redux';
 import { allProductApi } from '../../Redux/Allproduct/productApi';
-import { useState } from "react";
+import { useState,useEffect } from "react";
 export const ExploreSlider = ({item}) => {
     const selector = useSelector()
     const [sliderRef, setSliderRef] = useState(null);

@@ -39,12 +39,7 @@ export const All_Product = () => {
           
         )
       })},
-      {/* {all_product.map((item)=>{
-        return(
-          <ExploreSlider key={item.id} item={item}/>
-          
-        )
-      })} */}
+      
      
     </div>
     </>
