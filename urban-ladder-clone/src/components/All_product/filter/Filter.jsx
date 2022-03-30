@@ -10,7 +10,9 @@ import { Finish } from "./Finish";
 import { Price } from "./Price";
 import styles from "../all_product.module.css";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-export const Filter = () => {
+import { Recommends } from "./Recommends";
+import SliderProton from "./SliderProton";
+export const Filter = ({handleFilter,selectedPrice,changedPrice}) => {
   return (
     <div
       style={{
@@ -27,7 +29,7 @@ export const Filter = () => {
             offset={[10, 1]}
             placement="bottom"
             theme="light"
-            content={<Price></Price>}
+            content={<SliderProton value={selectedPrice} changedPrice={changedPrice}/>}
             interactive={true}
           >
             <span>
@@ -38,7 +40,7 @@ export const Filter = () => {
         </div>
         <div className={styles.parameter}>
           <Tippy
-            offset={[150, 17]}
+            offset={[60, 19]}
             theme="light"
             content={<Feature></Feature>}
             interactive={true}
@@ -51,7 +53,7 @@ export const Filter = () => {
         </div>
         <div className={styles.parameter}>
           <Tippy
-            offset={[150, 17]}
+            offset={[60, 19]}
             theme="light"
             content={<Material></Material>}
             interactive={true}
@@ -64,7 +66,7 @@ export const Filter = () => {
         </div>
         <div className={styles.parameter}>
           <Tippy
-            offset={[150, 17]}
+            offset={[60, 19]}
             theme="light"
             content={<Finish></Finish>}
             interactive={true}
@@ -77,10 +79,11 @@ export const Filter = () => {
         </div>
         <div className={styles.parameter}>
           <Tippy
-            offset={[150, 17]}
+            offset={[30, 19]}
             theme="light"
             content={<Size></Size>}
             interactive={true}
+            placement ="bottom"
           >
             <span>
               <button>Size</button>
@@ -90,7 +93,7 @@ export const Filter = () => {
         </div>
         <div className={styles.parameter}>
           <Tippy
-            offset={[150, 17]}
+            offset={[80, 19]}
             theme="light"
             content={<Brand></Brand>}
             interactive={true}
@@ -118,7 +121,7 @@ export const Filter = () => {
           offset={[10, 1]}
           placement="bottom"
           theme="light"
-          content={<Price></Price>}
+          content={<Recommends handleFilter={handleFilter}/>}
           interactive={true}
         >
           <span className={styles.recommend_btn}>
