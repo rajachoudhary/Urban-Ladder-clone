@@ -2,7 +2,7 @@ const express = require("express");
 const { authenticate } = require("../middlewares/authenticate.middleware");
 const authorize = require("../middlewares/authorize.middleware");
 
-const Product = require("../models/product.model");
+const Product = require("../../src/models/product.model");
 
 const router = express.Router();
 
@@ -31,7 +31,7 @@ router.get("", async (req, res) => {
     }
     console.log(constraint);
     const offset = (page - 1) * limit || 0;
-    const limitTotal = limit || 5;
+    const limitTotal = limit || 30;
     const products = await Product.find(constraint)
       .skip(offset)
       .limit(limitTotal)

@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from "./all_product.module.css"
+import { AiOutlineHeart } from 'react-icons/ai';
 export const ProductCard = ({item}) => {
     const {title,sub_title,brand,price,discount_price,emi,img} = item;
   return (
       <>
  <div className={styles.prod_card}>
+            <AiOutlineHeart className={styles.heart}></AiOutlineHeart>
      <div className={styles.ribbon}>20% off</div>
      <div className={styles.prod_img}>
      <img  style={{  width: "100%"}} src={img}/>

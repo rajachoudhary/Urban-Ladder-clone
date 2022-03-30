@@ -1,6 +1,6 @@
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
-const User = require("../models/User.model");
+const User = require("../../src/models/user.model");
 const jwt = require("jsonwebtoken");
 const req = require("express/lib/request");
 const FacebookStrategy = require("passport-facebook").Strategy;
@@ -13,7 +13,8 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:8000/auth/google/callback",
+      callbackURL:
+        "https://urbanladderclone.herokuapp.com/api/auth/google/callback",
       passReqToCallback: true,
     },
     async function (request, accessToken, refreshToken, profile, done) {
@@ -40,7 +41,8 @@ passport.use(
     {
       clientID: process.env.FACEBOOK_APP_ID,
       clientSecret: process.env.FACEBOOK_APP_SECRET,
-      callbackURL: "http://localhost:8000/auth/facebook/callback",
+      callbackURL:
+        "https://urbanladderclone.herokuapp.com/api/auth/facebook/callback",
       profileFields: ["id", "emails", "name"],
     },
     async function (accessToken, refreshToken, profile, cb) {
