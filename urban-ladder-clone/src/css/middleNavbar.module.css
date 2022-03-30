@@ -19,6 +19,7 @@
   height: 40px;
   margin-left: 50px;
   margin: auto;
+ outline: none;
 }
 .middleNavbarContainer > div:nth-child(3) {
   /* border:1px solid black; */

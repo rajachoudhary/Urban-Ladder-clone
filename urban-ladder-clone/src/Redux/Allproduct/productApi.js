@@ -6,6 +6,7 @@ dispatch(product_request())
 axios
 .get("http://localhost:3001/all_product")
 .then((res)=>{
+    
     dispatch(product_success(res.data))
 })
 .catch((res)=>{

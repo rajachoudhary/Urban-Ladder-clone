@@ -12,7 +12,7 @@
 }
 .button :hover {
   color: #f9913d;
-  border-bottom: 15px #f9913d;
+  border-bottom: 15px ;
   text-decoration: underline 2px;
   text-underline-offset: 15px;
 }
