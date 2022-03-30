@@ -8,7 +8,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import { allProductApi } from '../../Redux/Allproduct/productApi';
 import { useState,useEffect } from "react";
 export const ExploreSlider = ({item}) => {
-    const selector = useSelector()
+  
     const [sliderRef, setSliderRef] = useState(null);
     const [data,setData] = useState();
     const dispatch = useDispatch();
