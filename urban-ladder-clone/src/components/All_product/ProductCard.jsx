@@ -13,9 +13,9 @@ export const ProductCard = ({item}) => {
      </div>
     
     <div className={styles.des}>
-                <p style={{color:"black",fontSize:"15px"}}>{title}</p>
-                <p>{sub_title}</p>
-                <p>{brand}</p>
+        <p style={{color:"black",fontSize:"15px"}}>{title}</p>
+        <p>{sub_title}</p>
+        <p>{brand}</p>
     </div>
     <div style={{fontSize:"14px"}} >
         <span  style={{color:"grey",textDecoration:"line-through"}}> ₹{price}</span>

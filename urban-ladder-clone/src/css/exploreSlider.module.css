@@ -1,0 +1,104 @@
+.prod_main{
+    display: flex;
+    justify-content: space-around;
+   
+  
+    width: 1000px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.prod_img{
+    width: 100%;
+    height: 300px;
+}
+
+.prod_card{
+  width: 280px;
+  height: 450px;
+ position: relative;
+  border: 10px solid hsla(0, 0%, 100%, 0.973);
+  
+    
+}
+.prod_card:hover {
+   border: 10px solid hsla(0, 0%, 100%, 0.973);
+   width: 280px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 
+  }
+  .prod_card:hover .btn_div{
+    display: flex;
+    font-size: 10px;
+    
+    justify-content: space-evenly;
+
+  }
+.des > p{
+    margin: 0;
+    font-size: 12px;
+    color: gray;
+}
+
+.view4option_btn{
+    color: white;
+    background-color: #ed7745;
+    padding: 1vh;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+}
+.add_to_compare_btn{
+    color: #ed7745;
+    border:1px solid #ed7745 ;
+    border-radius: 5px;
+    padding: 1vh;
+    width: 100px;
+   
+   
+}
+.btn_div  {
+   display: none;
+}
+.ribbon {
+  --f: 10px; /* control the folded part*/
+  --r: 15px; /* control the ribbon shape */
+  --t: 10px; /* the top offset */
+
+  position: absolute;
+  inset: var(--t)  auto auto calc(-1*var(--f));
+  padding: 0 10px var(--f) calc(10px + var(--r));
+  clip-path: 
+    polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
+      calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
+      var(--r) calc(50% - var(--f)/2)); 
+
+
+  background: #e44079;
+  box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+}
+
+
+/*filter  */
+.parameter{
+ background-color: #ed7745;
+ color: white;
+ border-radius: 4px;
+ padding: 0.5vh;
+ font-size: 12px;
+}
+.parameter button{
+  background-color:#ed7745 ;
+  border-radius: 0.5vh;
+border: none;
+}
+.recommend_btn{
+  border : 1px solid gray;
+  padding: 0.5vh;
+  border-radius: 0.5vh;
+  
+}
+.recommend_btn > button{
+  border : none;
+  background-color: white;
+}

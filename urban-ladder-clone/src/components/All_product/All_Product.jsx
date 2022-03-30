@@ -6,6 +6,7 @@ import { allProductApi } from '../../Redux/Allproduct/productApi';
 import { ProductCard } from './ProductCard';
 import styles from "./all_product.module.css";
 import { Filter } from './filter/Filter';
+import { ExploreSlider } from '../LandingPage/ExploreSlider';
 export const All_Product = () => {
     const [data,setData] = useState();
     const dispatch = useDispatch();
@@ -35,8 +36,10 @@ export const All_Product = () => {
       {all_product.map((item)=>{
         return(
           <ProductCard key={item.id} item={item}/>
+          
         )
-      })}
+      })},
+      
      
     </div>
     </>

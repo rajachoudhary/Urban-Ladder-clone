@@ -1,4 +1,38 @@
+.exploreContainer{
+    background-color: #F9FAFA;
+    padding-top: 50px;
+}
 .exploreHeading{
-    font-size: 35px;
-    padding: 20px 0;
+    font-size: 25px;
+    padding-Top: 20px;
+    text-align: center; 
+}
+.headingUnderLine{
+    width: 150px;
+    margin: auto;
+    border-bottom:  1px solid #f9913d;
+    padding-top: 10px;
+}
+.exploreImageContainer{
+    padding-top: 50px;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin: auto;
+}
+.exploreImage{
+    height: 60px;
+    width: 60px;
+}
+.exploreImageContainer >a >p {
+    text-align: center;
+    color: black;
+}
+.exploreImageContainer >a :hover {
+    fill: #f9913d;
+}
+.exploreImageContainer >a >p :hover{
+   color: #f9913d ;
 }
