@@ -1,47 +1,43 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-// import Slider from '@material-ui/core/Slider';
-import Slider from '@mui/material/Slider';
+import Slider from '@material-ui/core/Slider';
+
 const useStyles = makeStyles({
-//   root: {
-//     width: '200px',
-//   },
+  root: {
+    width: '90%',
+    margin : "auto"
+  },
   thumb: {
-    color: '#000',
+    color: 'lightgrey',
+    padding :`8px`
   },
   rail: {
     color: `rgba(0, 0, 0, 0.26)`,
+    height: `8px`
   },
   track: {
-    color: '#000',
+    color: '#ed7745',
+    height: `8px`
   },
 });
 
-const SliderProton = ({ value, changePrice }) => {
+const SliderProton = ({ value, changedPrice }) => {
   const classes = useStyles();
 
   return (
-    <div style={{width:"200px"}}>
-      {/* <Slider
+    <div className={classes.root}>
+      <Slider
         value={value}
-        onChange={changePrice}
-        valueLabelDisplay='on'
-        min={1000}
-        max={4000}
+        onChange={changedPrice}
+       /* valueLabelDisplay='on'*/
+        min={500}
+        max={100000}
         classes={{
           thumb: classes.thumb,
           rail: classes.rail,
           track: classes.track,
         }}
-      /> */}
-      <Slider
-     
-        value={value}
-        onChange={changePrice}
-        valueLabelDisplay='on'
-        min={1000}
-        max={4000}
       />
     </div>
   );

@@ -82,7 +82,7 @@
       var(--r) calc(50% - var(--f)/2)); 
 
 
-  background: #e44079;
+  background: #ed7745;
   box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
 }
 
