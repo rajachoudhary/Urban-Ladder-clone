@@ -1,0 +1,41 @@
+.size{
+    display: flex;
+    align-items: center;
+    gap : 10px;
+    cursor : pointer;
+    margin: 1vh 2vh;
+}
+
+.size >p{
+    margin: 0;
+}
+.price_main{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+    
+}
+.price_div{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  
+    gap: 5vh;
+    padding: 1vh;
+}
+.price_div span{
+    display: flex;
+    align-items: center; 
+}
+.price_div p{
+    margin: 0;
+}
+.pricedisplay{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 0 2vh;
+}
+.pricedisplay p{
+    margin: 0;
+}

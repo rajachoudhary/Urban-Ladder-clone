@@ -1,0 +1,62 @@
+.popularContainer{
+  padding-top: 40px;
+  position: relative;
+  /* border: 1px solid black; */
+  width: 60%;
+  margin: auto;
+}
+.popularSubContainer{
+  padding-top: 25px;
+}
+
+.exploreHeading{
+  font-size: 25px;
+  padding-Top: 20px;
+  text-align: center; 
+}
+.headingUnderLine{
+  width: 150px;
+  margin: auto;
+  border-bottom:  1px solid #f9913d;
+  padding-top: 10px;
+}
+.leftSliderbuttton{
+  position: absolute;
+  font-size: 50px;
+  border: none;
+  top: 230px;
+  right: -60px;
+  background-color: white; 
+  cursor: pointer;
+}
+.rightSliderButtton{
+ 
+  position: absolute;
+  font-size: 50px;
+  border: none;
+  left: -60px;
+  top: 230px;
+  background-color: white;
+  cursor: pointer;
+}
+.prod_img {
+  width: 210px;
+  height: 210px;
+}
+
+.popularCardContainer {
+  /* border: 1px solid black !important; */
+  width: 220px ;
+  height: 300px;
+  
+  /* position: relative; */
+  border: 10px solid hsla(0, 0%, 100%, 0.973);
+}
+
+
+.des > p {
+  margin: 0;
+  font-size: 12px;
+  color: gray;
+  text-align: center;
+}

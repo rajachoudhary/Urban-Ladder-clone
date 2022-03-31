@@ -1,6 +1,6 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
-const User = require("../models/User.model");
+const User = require("../../src/models/user.model");
 const passport = require("../configs/google-oauth");
 
 passport.serializeUser(function (token, done) {

@@ -1,19 +1,21 @@
 import React from 'react'
 import styles from "./all_product.module.css"
+import { AiOutlineHeart } from 'react-icons/ai';
 export const ProductCard = ({item}) => {
     const {title,sub_title,brand,price,discount_price,emi,img} = item;
   return (
       <>
  <div className={styles.prod_card}>
+            <AiOutlineHeart className={styles.heart}></AiOutlineHeart>
      <div className={styles.ribbon}>20% off</div>
      <div className={styles.prod_img}>
      <img  style={{  width: "100%"}} src={img}/>
      </div>
     
     <div className={styles.des}>
-                <p style={{color:"black",fontSize:"15px"}}>{title}</p>
-                <p>{sub_title}</p>
-                <p>{brand}</p>
+        <p style={{color:"black",fontSize:"15px"}}>{title}</p>
+        <p>{sub_title}</p>
+        <p>{brand}</p>
     </div>
     <div style={{fontSize:"14px"}} >
         <span  style={{color:"grey",textDecoration:"line-through"}}> ₹{price}</span>

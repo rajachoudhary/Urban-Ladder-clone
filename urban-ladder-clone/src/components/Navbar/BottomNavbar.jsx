@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
-import style from "../css/bottomNavbar.module.css"
+import style from "../../css/bottomNavbar.module.css"
 // import './index.css';
 import { Menu, Dropdown, Button } from 'antd';
 const menu = (
@@ -9,7 +9,7 @@ const menu = (
     <Menu.ItemGroup>
       <Menu.Item className={style.menuItem}>
         <a className={style.hoverHeading} target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-         Title
+         Living
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
@@ -77,67 +77,47 @@ const menu = (
     <Menu.ItemGroup>
       <Menu.Item className={style.menuItem}>
         <a className={style.hoverHeading} target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-         Title
+         Bedroom & Dinning
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-          Fabric Sofas
+         Beds
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-          Liverpool Sofa Sets
+           Mattresses
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Lounge and Ancent Chairs
+          Bedside Tables
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Sofa Beds
+          Wardrobes
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Lounge and Ancent Chairs
+          chest of Drawers
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Coffee Tables and Side Tables
+          Dinning Chairs
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Recliners
+          Dinning Table Sets
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-         Living Storage
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Shoe racks
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          TV Units
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Bookshelves
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Balcony & Outdoor
+         Dinning Storage
         </a>
       </Menu.Item>
   </Menu.ItemGroup>
@@ -145,67 +125,91 @@ const menu = (
     <Menu.ItemGroup>
       <Menu.Item className={style.menuItem}>
         <a className={style.hoverHeading} target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-         Title
+         Others
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-          Fabric Sofas
+         Study Tables
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-          Liverpool Sofa Sets
+          Study Chairs
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Lounge and Ancent Chairs
+          Bedsheets
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Sofa Beds
+          Carpets
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Lounge and Ancent Chairs
+          Lighting
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Coffee Tables and Side Tables
+          Curtains
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Recliners
+          wall Decor
+        </a>
+      </Menu.Item>
+      
+  </Menu.ItemGroup>
+  <div className={style.verticleLine}></div>
+    <Menu.ItemGroup>
+      <Menu.Item className={style.menuItem}>
+        <a className={style.hoverHeading} target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+         Stores
+        </a>
+      </Menu.Item>
+      <Menu.Item className={style.menuItem}>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+          Hyderabad
+        </a>
+      </Menu.Item>
+      <Menu.Item className={style.menuItem}>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+         Pune
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-         Living Storage
+          Mumbai
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Shoe racks
+          Bangalore
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          TV Units
+         NCR
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Bookshelves
+          Chennai
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Balcony & Outdoor
+         Hyderabad
+        </a>
+      </Menu.Item>
+      <Menu.Item className={style.menuItem}>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+         Coimbatore
         </a>
       </Menu.Item>
   </Menu.ItemGroup>
@@ -213,130 +217,62 @@ const menu = (
     <Menu.ItemGroup>
       <Menu.Item className={style.menuItem}>
         <a className={style.hoverHeading} target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-         Title
+         Promotios
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-          Fabric Sofas
+          Products of 70% OFF
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-          Liverpool Sofa Sets
+        Products of 60% OFF
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Lounge and Ancent Chairs
+        Products of 50% OFF
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Sofa Beds
+        Products of 40% OFF
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Lounge and Ancent Chairs
+        Products of 35% OFF
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Coffee Tables and Side Tables
+        Products of 30% OFF
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Recliners
+        Products of 25% OFF
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-         Living Storage
+        Products of 20% OFF
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Shoe racks
+        Products of 10% OFF
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          TV Units
+          All Products
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Bookshelves
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Balcony & Outdoor
-        </a>
-      </Menu.Item>
-  </Menu.ItemGroup>
-  <div className={style.verticleLine}></div>
-    <Menu.ItemGroup>
-      <Menu.Item className={style.menuItem}>
-        <a className={style.hoverHeading} target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-         Title
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-          Fabric Sofas
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-          Liverpool Sofa Sets
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Lounge and Ancent Chairs
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Sofa Beds
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Lounge and Ancent Chairs
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Coffee Tables and Side Tables
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Recliners
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-         Living Storage
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Shoe racks
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          TV Units
-        </a>
-      </Menu.Item>
-      <Menu.Item className={style.menuItem}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-          Bookshelves
+          All Decor on sale
         </a>
       </Menu.Item>
       <Menu.Item className={style.menuItem}>

@@ -19,6 +19,7 @@
   color: rgb(212, 209, 209);
 }
 
-.hoverColorChange:hover {
-  color: #ed7745;
+.topNavbarContainer >div >div:hover {
+  cursor: pointer;
+  fill: #ed7745;
 }
