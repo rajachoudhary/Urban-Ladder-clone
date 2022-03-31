@@ -26,11 +26,12 @@ export const Filter = ({handleFilter,selectedPrice,changedPrice}) => {
       <div style={{ display: "flex", justifyContent: "center", gap: "1vh" }}>
         <div className={styles.parameter}>
           <Tippy
-            offset={[10, 1]}
+            offset={[110, 19]}
             placement="bottom"
             theme="light"
-            content={<SliderProton value={selectedPrice} changedPrice={changedPrice}/>}
+            content={<Price value={selectedPrice} changedPrice={changedPrice}/>}
             interactive={true}
+           
           >
             <span>
               <button>Price</button>

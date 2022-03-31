@@ -4,7 +4,7 @@ import { product_failure, product_request, product_success } from "./product.act
 export const allProductApi = (params)=>(dispatch)=>{
    
 dispatch(product_request())
-
+//https://urbanladderclone.herokuapp.com/api/products   res.data.products
 axios
 .get(!params ?"https://urbanladderclone.herokuapp.com/api/products" :`https://urbanladderclone.herokuapp.com/api/products?&sort=${params}`)
 .then((res)=>{
