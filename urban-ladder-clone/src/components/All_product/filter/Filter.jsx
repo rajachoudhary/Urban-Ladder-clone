@@ -11,8 +11,8 @@ import { Price } from "./Price";
 import styles from "../all_product.module.css";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Recommends } from "./Recommends";
-import SliderProton from "./SliderProton";
-export const Filter = ({handleFilter,selectedPrice,changedPrice}) => {
+
+export const Filter = ({handleFilter,selectedPrice,changedPrice,brands,handleChangeChecked}) => {
   return (
     <div
       style={{
@@ -31,6 +31,7 @@ export const Filter = ({handleFilter,selectedPrice,changedPrice}) => {
             theme="light"
             content={<Price value={selectedPrice} changedPrice={changedPrice}/>}
             interactive={true}
+          
            
           >
             <span>
@@ -45,6 +46,7 @@ export const Filter = ({handleFilter,selectedPrice,changedPrice}) => {
             theme="light"
             content={<Feature></Feature>}
             interactive={true}
+            placement ="bottom"
           >
             <span>
               <button>Feature</button>
@@ -58,6 +60,7 @@ export const Filter = ({handleFilter,selectedPrice,changedPrice}) => {
             theme="light"
             content={<Material></Material>}
             interactive={true}
+            placement ="bottom"
           >
             <span>
               <button>Material</button>
@@ -71,6 +74,7 @@ export const Filter = ({handleFilter,selectedPrice,changedPrice}) => {
             theme="light"
             content={<Finish></Finish>}
             interactive={true}
+            placement ="bottom"
           >
             <span>
               <button>Finish</button>
@@ -96,12 +100,13 @@ export const Filter = ({handleFilter,selectedPrice,changedPrice}) => {
           <Tippy
             offset={[80, 19]}
             theme="light"
-            content={<Brand></Brand>}
+            content={<Brand brands={brands} handleChangeChecked={handleChangeChecked}/>}
             interactive={true}
+            placement ="bottom"
           >
             <span>
               <button>Brand</button>
-              <ArrowDropDownIcon />
+              <ArrowDropDownIcon  />
             </span>
           </Tippy>
         </div>
@@ -124,6 +129,7 @@ export const Filter = ({handleFilter,selectedPrice,changedPrice}) => {
           theme="light"
           content={<Recommends handleFilter={handleFilter}/>}
           interactive={true}
+         
         >
           <span className={styles.recommend_btn}>
             <button>Recommended</button>
