@@ -1,0 +1,46 @@
+.topFooterContainer {
+  width: 65%;
+  display: flex;
+  gap: 2rem;
+  margin: auto;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.subContainer > div > div {
+  /* padding-right:30px; */
+  font-size: 11px;
+  font-family: "Mr Eaves XL Modern", sans-serif;
+  color: #2f4858;
+  padding: 3px;
+  padding-left: 0px;
+}
+.subContainer > div > div:hover {
+  color: #f7750c;
+}
+.subContainer {
+  display: flex;
+  gap: 2rem;
+  width: 240px;
+}
+.header {
+  color: #000000;
+
+  padding-bottom: 5px;
+
+  margin-bottom: 15px;
+}
+
+.header {
+  position: relative;
+}
+
+.header:after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  display: block;
+  height: 1px;
+  background-color: #f7750c;
+  bottom: -5px;
+}
