@@ -1,0 +1,49 @@
+.middleNavbarContainer{
+    display: flex;
+    width: 65%;
+    margin: auto;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-bottom: 50px;
+}
+.leftContainer :nth-child(2){
+   display: flex;
+   gap: 1rem;
+}
+.contactNo{
+    /* border: 1px solid black; */
+    color: #f7750c;
+    font-size: 12px;
+}  
+.middleFooterIcon{
+    height: 25px;
+    width: 25px;
+}
+.middleFooterIcon:hover{
+    fill:#f7750c
+}
+.rightContainer >div>div>img{
+    width: 150px;
+    height: 40px;
+}
+.rightContainer>div:nth-child(2){
+    display: flex;
+    padding: 5px 0;
+}
+.footerHeader{
+    color:#000000 ;
+    position: relative;
+    margin-bottom: 20px;
+    /* padding: 5px 0; */
+}
+.footerHeader:after{
+    content: "";
+    /* border: 1px solid black; */
+  position: absolute;
+  width: 15%;
+  display: block;
+  height: 1px;
+  background-color: #f7750c;
+  bottom: -7px;
+  
+}
