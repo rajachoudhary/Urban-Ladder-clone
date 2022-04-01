@@ -20,21 +20,19 @@ export const addCartApi = (id, token) => {
   );
 };
 export const allProductApi = (params) => (dispatch) => {
-    console.log("par",params.search,params.sort);
+  console.log("par", params);
   dispatch(product_request());
-  //https://urbanladderclone.herokuapp.com/api/products   res.data.products   ?&sort=${params}
-  axios
-    .get(
-        !params
-        ? `https://urbanladderclone.herokuapp.com/api/products`
-        : `https://urbanladderclone.herokuapp.com/api/products${params.search}`
-    )
-    .then((res) => {
-      console.log(res);
-     
-      dispatch(product_success(res.data.products));
-    })
-    .catch((res) => {
-      dispatch(product_failure());
-    });
+  if (params) {
+    axios
+      .get(
+        `https://urbanladderclone.herokuapp.com/api/products/${params.search}&sort=${params.sort}`
+      )
+      .then((res) => {
+        console.log(res);
+        dispatch(product_success(res.data.products));
+      })
+      .catch((res) => {
+        dispatch(product_failure());
+      });
+  }
 };

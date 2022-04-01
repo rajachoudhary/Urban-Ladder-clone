@@ -9,6 +9,7 @@ import { TopFooter } from "../components/LandingPage/Footer/TopFooter";
 import { MiddleFooter } from "../components/LandingPage/Footer/MiddleFooter";
 import { BottomFooter } from "../components/LandingPage/Footer/BottomFooter";
 import Features from "../components/subcomponents/Features";
+import Browsepop from "../components/subcomponents/Browsepop";
 export const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
@@ -37,6 +38,7 @@ export const ProductDetails = () => {
       <PopularSlider title="Similar Products" />
       <PopularSlider title="Popular Across Site" />
       <PopularSlider title="Recently Viewed" />
+      <Browsepop />
       <TopFooter />
       <MiddleFooter />
       <BottomFooter />
