@@ -1,0 +1,39 @@
+.browsepop{
+    width:60%;
+    margin: auto;
+}
+.title {
+    font-size: 35px;
+    width:50%;
+    margin: auto;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid #ed7745
+}
+.blocks{
+    display: flex;
+    margin-top: 33px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 10px;
+}
+.blocks>div{
+    width: 30%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    background-color: rgb(238, 237, 237);
+    font-size: 14px;
+}
+.propsec{
+    margin-top: 4px;
+    margin-left: 10px;
+}
+.propsec>div{
+    color: #ed7745;
+}
+.propsec>div+div{
+    color: rgb(27, 27, 27);
+}
