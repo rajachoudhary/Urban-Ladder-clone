@@ -7,22 +7,22 @@ import { ReactComponent as User } from "../../svgFiles/user.svg";
 import { ReactComponent as Like } from "../../svgFiles/like.svg";
 import { ReactComponent as Cart } from "../../svgFiles/cart.svg";
 import { LogInButton } from "./LogInButton";
-import {FiSearch} from "react-icons/fi"
+import { FiSearch } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 export const MiddleNavbar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [query,setQuery] = React.useState("")
-  const [data,setData] = React.useState([])
-  
-  const navigate = useNavigate()
-  const handleSubmit = (e) =>{
-    e.preventDefault()
+  const [query, setQuery] = React.useState("");
+  const [data, setData] = React.useState([]);
+
+  const navigate = useNavigate();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     // getData()
-    console.log(data)
-    navigate(`/products?category=${query}`)
-    setQuery("")
-  }
+    console.log(data);
+    navigate(`/products?category=${query}`);
+    setQuery("");
+  };
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -41,26 +41,31 @@ export const MiddleNavbar = () => {
           <LogoBox />
           <UrbanLadder />
         </div>
-        <div>
-          <FiSearch className={style.searchIcon} onClick={handleSubmit}/>
-          <input placeholder="Search"  value={query} onChange={(e)=>setQuery(e.target.value)}/>
+        <div className={style.SearchDiv}>
+          <FiSearch className={style.searchIcon} onClick={handleSubmit} />
+          <input
+            placeholder="Search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
         </div>
         <div className={style.hoverColorChange}>
-          <TrackItem className={style.onHoverColorChange}/>
-          <User className={style.onHoverColorChange}
+          <TrackItem className={style.onHoverColorChange} />
+          <User
+            className={style.onHoverColorChange}
             // className={anchorEl === null ? style.icons2 : style.icon2hover}
             onMouseEnter={(e) => handleClick(e)}
           />
-          <Like className={style.onHoverColorChange}/>
-          <Cart className={style.onHoverColorChange}/>
+          <Like className={style.onHoverColorChange} />
+          <Cart className={style.onHoverColorChange} />
         </div>
       </div>
       <LogInButton
-            id={id}
-            open={open}
-            anchorEl={anchorEl}
-            onClose={handleClose}
-          />
+        id={id}
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handleClose}
+      />
       <div className={style.footerLine}></div>
     </>
   );

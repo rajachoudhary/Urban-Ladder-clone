@@ -8,6 +8,7 @@ import { PopularSlider } from "../components/LandingPage/PopularSlider";
 import { TopFooter } from "../components/LandingPage/Footer/TopFooter";
 import { MiddleFooter } from "../components/LandingPage/Footer/MiddleFooter";
 import { BottomFooter } from "../components/LandingPage/Footer/BottomFooter";
+import Features from "../components/subcomponents/Features";
 export const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
@@ -32,6 +33,7 @@ export const ProductDetails = () => {
         )}
         <TrustWrapper />
       </div>
+      <Features />
       <PopularSlider title="Similar Products" />
       <PopularSlider title="Popular Across Site" />
       <PopularSlider title="Recently Viewed" />
