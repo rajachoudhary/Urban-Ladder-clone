@@ -6,11 +6,13 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { loginApi, registerApi, socialApi } from "../../Redux/User/userApi";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 export function LogModal(props) {
   let [email, setEmail] = React.useState("");
   let [pass, setPass] = React.useState("");
   const dispatch = useDispatch();
+  const message = useSelector((res) => res.User.message);
   let [passType, setPassType] = React.useState("password");
   return (
     <Modal
@@ -84,9 +86,12 @@ export function LogModal(props) {
               </div>
             )}
           </div>
+          {message != "" && <p className={styles.err}>{message}</p>}
           {props.login ? (
             <button
-              onClick={() => loginApi({ email, pass })(dispatch)}
+              onClick={() => {
+                loginApi({ email, pass })(dispatch);
+              }}
               className={styles.logButton}
             >
               Log In
