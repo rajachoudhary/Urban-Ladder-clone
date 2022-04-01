@@ -12,14 +12,22 @@
   gap: 0.5rem;
 }
 .middleNavbarContainer > div:nth-child(2) > input {
-  /* border:1px solid black; */
+  /* border:10px solid black; */
+  position: relative;
   width: 650px;
   padding: 10px;
   border: 1px solid rgb(231, 225, 225);
   height: 40px;
   margin-left: 50px;
   margin: auto;
- outline: none;
+  outline: none;
+}
+.searchIcon{
+  position: absolute;
+  left: 1050px;
+  z-index: 200;
+  height: 40px;
+  width: 20px;
 }
 .middleNavbarContainer > div:nth-child(3) {
   /* border:1px solid black; */
