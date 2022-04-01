@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Address } from "./pages/Address";
-import { Cart } from "./pages/Cart";
+import  Address  from "./pages/Address";
+import  Cart  from "./pages/Cart";
 import { Home } from "./pages/Home";
-import { Payment } from "./pages/Payment";
+import  Payment  from "./pages/Payment";
 import { Products } from "./pages/Products";
 import { ProductDetails } from "./pages/ProductDetails";
 export const Router = () => {
@@ -18,9 +18,8 @@ export const Router = () => {
         </Route>
         <Route path="/productDetail/:id" element={<ProductDetails/>}></Route>
         <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Payment />}>
-          <Route path="address" element={<Address />} />
-          <Route path="payment" element={<Payment />} />
+        <Route path="/address" element={<Address />}>
+          <Route path="/payment" element={<Payment />} />
         </Route>
       </Routes>
     </div>

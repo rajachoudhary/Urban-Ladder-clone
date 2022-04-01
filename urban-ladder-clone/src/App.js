@@ -4,6 +4,9 @@ import { Router } from "./Router";
 import React, { useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
+// import Address from "./pages/Address";
+// import Cart from "./pages/Cart";
+// import Payment from "./pages/Payment";
 
 
 function App() {
@@ -18,8 +21,8 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Navbar />
-      <Router />
+       <Navbar/> 
+       <Router/> 
     </div>
   );
 }
