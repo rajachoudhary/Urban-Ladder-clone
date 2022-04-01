@@ -8,6 +8,9 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function Cart() {
+  const current = new Date();
+  const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+
   const [cartItems, setCartItems] = useState([]);
   const navigate = useNavigate();
   const { token } = useSelector((state) => state.User);
@@ -23,7 +26,8 @@ export default function Cart() {
         }
       )
       .then((res) => {
-        console.log(res)
+        console.log(res.data.cart)
+        setCartItems(res.data.cart)
       })
       
       .catch((err)=>{
@@ -79,19 +83,22 @@ export default function Cart() {
       </div>
       <div>
         <div>
-          {cartItems.map((data) => {
+        
+          {cartItems.map((product) => {
+            const {product:data} = product;
+            {console.log("qw",data.id)}
             return (
               <div key={data.id} className={styles.heading}>
                 <div className={styles.cartprod}>
                   <div className={styles.imageDiv}>
-                    <img src={data.image} alt="" />
+                    <img src={data.img} alt="" />
                   </div>
                   <div className={styles.detailsDiv}>
-                    <div>{data.name}</div>
+                    <div>{data.title}</div>
                     <div>{data.color}</div>
                   </div>
                 </div>
-                <div className={styles.cartdata}>{data.date}</div>
+                <div className={styles.cartdata}>{date}</div>
                 <div className={styles.cartdata}>
                   <select>
                     <option value={1}>1</option>
