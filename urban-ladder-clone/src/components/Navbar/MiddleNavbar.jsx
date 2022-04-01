@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "../../css/middleNavbar.module.css";
 import { ReactComponent as LogoBox } from "../../svgFiles/logoBox.svg";
 import { ReactComponent as UrbanLadder } from "../../svgFiles/urbanLadder.svg";
@@ -7,9 +7,22 @@ import { ReactComponent as User } from "../../svgFiles/user.svg";
 import { ReactComponent as Like } from "../../svgFiles/like.svg";
 import { ReactComponent as Cart } from "../../svgFiles/cart.svg";
 import { LogInButton } from "./LogInButton";
+import {FiSearch} from "react-icons/fi"
+import { useNavigate } from "react-router-dom";
 
 export const MiddleNavbar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [query,setQuery] = React.useState("")
+  const [data,setData] = React.useState([])
+  
+  const navigate = useNavigate()
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+    // getData()
+    console.log(data)
+    navigate(`/products?category=${query}`)
+    setQuery("")
+  }
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -29,7 +42,8 @@ export const MiddleNavbar = () => {
           <UrbanLadder />
         </div>
         <div>
-          <input placeholder="Search" />
+          <FiSearch className={style.searchIcon} onClick={handleSubmit}/>
+          <input placeholder="Search"  value={query} onChange={(e)=>setQuery(e.target.value)}/>
         </div>
         <div className={style.hoverColorChange}>
           <TrackItem className={style.onHoverColorChange}/>

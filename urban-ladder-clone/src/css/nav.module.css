@@ -1,0 +1,54 @@
+.cartnav{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    background-color: #fff;
+}
+.lnav{
+    width: 40%;
+}
+.lnav >div{
+    margin-top: 10px;
+    display: flex;
+}
+.lnav > div > span{
+   margin-left: 2%;
+}
+.rnav{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.rnav > div:nth-child(1) {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px
+}
+.rnav > div:nth-child(2) {
+    margin-left: 50%;
+    margin-top: 30px
+}
+.navbtn{
+    border: none;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+}
+.navbtn:hover{ 
+    color: #ed7745;
+    
+}
+
+.urbanLogo {
+    height: 80px;
+    width: 16%;
+    margin: 20px 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("https://www.ulcdn.net/media/ul/logo_static/ul-logo.jpg?1477486160");
+  }
+  .urbanLogo:hover {
+    background-image: url("https://www.ulcdn.net/media/ul/logo/new-logo.gif");
+  }
+  .hoverColorChange:hover {
+    color: #ed7745;
+  }

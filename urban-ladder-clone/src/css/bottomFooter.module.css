@@ -1,0 +1,36 @@
+.bottomContainer{
+    width: 65%;
+    margin: auto;
+    padding-top: 50px;
+}
+.textContainer{
+    display: flex;
+    gap: 1rem;
+    padding: 5px 0;
+
+}
+.textContainer>div:nth-child(2){
+    font-size: 14px;
+    color: white;
+    width: 75%;
+    cursor: pointer;
+}
+
+.textContainer>div:nth-child(1){
+    font-size: 17px;
+    color: white;
+    width: 25%;
+    font-weight: 600;
+}
+.footerImage{
+    margin-right: 10px;
+    width: 50px;
+    height: 20px;
+    cursor: pointer;
+    object-fit: contain;
+}
+.footerLastTest{
+    color: white;
+    text-align: center;
+    padding: 30px;
+}

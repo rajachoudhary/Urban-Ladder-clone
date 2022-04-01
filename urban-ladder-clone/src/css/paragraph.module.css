@@ -1,0 +1,64 @@
+.paragraphContainer{
+    width: 65%;
+    margin: auto;
+    font-family: "Mr Eaves XL Modern", sans-serif;
+    padding-bottom: 20px;
+}
+.paragraphContainer>h2{
+    font-size: 18px;
+    color: #2F4858;
+    padding: 10px 0;
+}
+.paragraphContainer>ul >li{
+    font-size: 13px;
+    font-weight: 900;
+    color: #818486;
+}
+.paragraphContainer>ul>p{
+    font-size: 13px;
+    color: rgb(163, 155, 155);
+}
+.paragraphContainer>p{
+    font-size: 13px;
+    color: rgb(163, 155, 155);
+}
+.paragraphContainer>h1{
+    font-size: 20px;
+    color: #376079;
+    font-family: "Mr Eaves XL Modern", sans-serif;
+    text-align: center;
+    padding: 45px 0;
+}
+.heading{
+    font-size: 15px;
+    letter-spacing:3px;
+    padding-top: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.inputContainer{
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+}
+.inputContainer >input{
+    width: 300px;
+    font-size: 12px;
+    height: 35px;
+    outline: none;
+
+}
+
+.inputContainer > button {
+    border: none;
+    background-color: #eba76f;
+    font-size: 13px;
+    color:white ;
+    /* padding: 8px; */
+    padding: 5px 15px;
+    position:cursor;
+    
+}
+.inputContainer > button:hover{
+    background-color: #F7750C;
+}
