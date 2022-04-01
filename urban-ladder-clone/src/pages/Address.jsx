@@ -3,10 +3,9 @@ import { useEffect, useState } from "react";
 import Nav from "../components/subcomponents/Nav";
 import Totalamt from "../components/subcomponents/Totalamt";
 import styles from "../css/address.module.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function AddressForm() {
-
   const navigate = useNavigate();
   const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
@@ -16,8 +15,8 @@ export default function AddressForm() {
   }, []);
 
   const handleContinue = () => {
-    //   if (.email) {   
-          navigate("/card/address/payment");
+    //   if (.email) {
+    navigate("/cart/address/payment");
     //   }
     //   else {
     //     alert("Please fill your personal details")
@@ -181,7 +180,9 @@ export default function AddressForm() {
                       />
                     </div>
                     <div className={styles.detailsDiv}>
-                      <div><b>{data.name}</b></div>
+                      <div>
+                        <b>{data.name}</b>
+                      </div>
                       <div>{data.color}</div>
                       <div>Quantity: 1</div>
                     </div>

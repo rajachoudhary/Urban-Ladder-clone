@@ -16,77 +16,77 @@ import { ReactComponent as Shoeracks } from "../../svgFiles/shoeracks.svg";
 import { ReactComponent as Decor } from "../../svgFiles/decor.svg";
 import { ReactComponent as AllFurniture } from "../../svgFiles/allFurniture.svg";
 import { ReactComponent as Sofas } from "../../svgFiles/sofas.svg";
+import { Link } from "react-router-dom";
 export const Explore = () => {
   return (
     <div className={style.exploreContainer}>
       <div className={style.exploreHeading}>Explore Our Furniture Range</div>
       <div className={style.headingUnderLine}></div>
-      <div class={style.exploreImageContainer} >
-        <a href="">
-          <Sofas  class={style.exploreImage}/>
+      <div class={style.exploreImageContainer}>
+        <Link to="/products?category=beds">
+          <Sofas class={style.exploreImage} />
           <p class={style.exploreImageName}>Sofas</p>
-        </a>
+        </Link>
         <a href="">
-          <Beds  class={style.exploreImage}/>
+          <Beds class={style.exploreImage} />
           <p class={style.exploreImageName}>Beds</p>
         </a>
         <a href="">
-          <Dininig  class={style.exploreImage}/>
+          <Dininig class={style.exploreImage} />
           <p class={style.exploreImageName}>Dininig</p>
         </a>
         <a href="">
-          <TvUnits  class={style.exploreImage}/>
+          <TvUnits class={style.exploreImage} />
           <p class={style.exploreImageName}>Sofas</p>
         </a>
         <a href="">
-          <Matresses  class={style.exploreImage}/>
+          <Matresses class={style.exploreImage} />
           <p class={style.exploreImageName}>Matresses</p>
         </a>
         <a href="">
-          <Seating  class={style.exploreImage}/>
+          <Seating class={style.exploreImage} />
           <p class={style.exploreImageName}>Seating</p>
         </a>
         <a href="">
-          <CoffeeTables  class={style.exploreImage}/>
+          <CoffeeTables class={style.exploreImage} />
           <p class={style.exploreImageName}>Sofas</p>
         </a>
         <a href="">
-          <Sofas  class={style.exploreImage}/>
+          <Sofas class={style.exploreImage} />
           <p class={style.exploreImageName}>Coffee Tables</p>
         </a>
         <a href="">
-          <CupBoards  class={style.exploreImage}/>
+          <CupBoards class={style.exploreImage} />
           <p class={style.exploreImageName}>CupBoards</p>
         </a>
         <a href="">
-          <Recliners  class={style.exploreImage}/>
+          <Recliners class={style.exploreImage} />
           <p class={style.exploreImageName}>Sofas</p>
         </a>
         <a href="">
-          <Storage  class={style.exploreImage}/>
+          <Storage class={style.exploreImage} />
           <p class={style.exploreImageName}>Storage</p>
         </a>
         <a href="">
-          <Study  class={style.exploreImage}/>
+          <Study class={style.exploreImage} />
           <p class={style.exploreImageName}>Study</p>
         </a>
         <a href="">
-          <BookShelves  class={style.exploreImage}/>
+          <BookShelves class={style.exploreImage} />
           <p class={style.exploreImageName}>BookShelves</p>
         </a>
         <a href="">
-          <Shoeracks  class={style.exploreImage}/>
+          <Shoeracks class={style.exploreImage} />
           <p class={style.exploreImageName}>Shoeracks</p>
         </a>
         <a href="">
-          <Decor  class={style.exploreImage}/>
+          <Decor class={style.exploreImage} />
           <p class={style.exploreImageName}>Decor</p>
         </a>
         <a href="">
-          <AllFurniture  class={style.exploreImage}/>
+          <AllFurniture class={style.exploreImage} />
           <p class={style.exploreImageName}>All Furniture</p>
         </a>
-       
       </div>
     </div>
   );

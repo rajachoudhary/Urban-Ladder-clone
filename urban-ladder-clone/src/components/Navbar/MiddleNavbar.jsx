@@ -8,20 +8,19 @@ import { ReactComponent as Like } from "../../svgFiles/like.svg";
 import { ReactComponent as Cart } from "../../svgFiles/cart.svg";
 import { LogInButton } from "./LogInButton";
 import { FiSearch } from "react-icons/fi";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const MiddleNavbar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [query, setQuery] = React.useState("");
   const [data, setData] = React.useState([]);
-
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     // getData()
     console.log(data);
     navigate(`/products?category=${query}`);
-   // setQuery("");
+    // setQuery("");
   };
 
   const handleClick = (event) => {
@@ -37,7 +36,7 @@ export const MiddleNavbar = () => {
   return (
     <>
       <div className={style.middleNavbarContainer}>
-        <div>
+        <div onClick={() => navigate("/")}>
           <LogoBox />
           <UrbanLadder />
         </div>
