@@ -1,0 +1,27 @@
+.features{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.features>div{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ccc;
+}
+.features>div+div{
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    line-height: 30px;
+}
+
+.title{
+    font-size: 15px;
+    color: #ed7745;
+    padding: 0% 3%;
+    border-left: 1px solid #ccc;
+}
+.title:hover{
+    color: #ccc;
+}
