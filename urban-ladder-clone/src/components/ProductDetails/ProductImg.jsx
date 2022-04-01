@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../css/ProductImgDesc.module.css";
 import { ProductContent } from "./ProductContent";
 import { ProductDescRight } from "./ProductDescRight";
 
 export const ProductImg = ({ img, product }) => {
+  const [show, setShow] = useState(false);
+  useEffect(() => {}, [show]);
   const mouseMove = (e) => {
+    setShow(true);
     var x = e.clientX - e.currentTarget.getBoundingClientRect().left;
     var y = e.clientY - e.currentTarget.getBoundingClientRect().top;
     console.log(e, x, y);
@@ -19,8 +22,7 @@ export const ProductImg = ({ img, product }) => {
     g.style.top = `${newposY}px`;
   };
   const mouseLeave = () => {
-    document.getElementById("divHide").style.display = "none";
-    document.getElementById("zoomedImage").style.display = "none";
+    setShow(false);
   };
   return (
     <div className={styles.ImgDiv}>
@@ -31,7 +33,7 @@ export const ProductImg = ({ img, product }) => {
           onMouseLeave={() => mouseLeave()}
         >
           <img src={img} alt="Stool" />
-          <div id="divHide" className={styles.divHide}></div>
+          {show && <div id="divHide" className={styles.divHide}></div>}
         </div>
         <ProductContent
           dimen={product["Product Dimensions"]}
@@ -39,15 +41,17 @@ export const ProductImg = ({ img, product }) => {
           quant={product.category}
         />
       </div>
-      <div className={styles.zoomDiv}>
-        <div
-          className={styles.zoomImg}
-          style={{
-            backgroundImage: `url(${img})`,
-          }}
-          id="zoomedImage"
-        ></div>
-      </div>
+      {show && (
+        <div className={styles.zoomDiv}>
+          <div
+            className={styles.zoomImg}
+            style={{
+              backgroundImage: `url(${img})`,
+            }}
+            id="zoomedImage"
+          ></div>
+        </div>
+      )}
       <ProductDescRight product={product} />
     </div>
   );

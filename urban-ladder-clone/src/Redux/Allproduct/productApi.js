@@ -5,39 +5,34 @@ import {
   product_success,
 } from "./product.action";
 
-
 export const addCartApi = (id, token) => {
-  axios
-    .post(
-      "https://urbanladderclone.herokuapp.com/api/cart",
-      {
-        quantity: 1,
-        product: id,
+  axios.post(
+    "https://urbanladderclone.herokuapp.com/api/cart",
+    {
+      quantity: 1,
+      product: id,
+    },
+    {
+      headers: {
+        accesstoken: "Bearer " + token,
       },
-      {
-        headers: {
-          accesstoken: "Bearer " + token,
-        },
-      }
-    )
-    .then((res) => res.json());
+    }
+  );
 };
-export const allProductApi = (params,sort)=>(dispatch)=>{
-    
-  
-
-   
-dispatch(product_request())
-//https://urbanladderclone.herokuapp.com/api/products   res.data.products   ?&sort=${params}
-axios
-.get(!params ?`https://urbanladderclone.herokuapp.com/api/products` :`https://urbanladderclone.herokuapp.com/api/products${params}&sort=${sort}`)
-.then((res)=>{
-
- console.log(res)
-    dispatch(product_success(res.data.products))
-
-})
-.catch((res)=>{
-    dispatch(product_failure())
-})
-}
+export const allProductApi = (params, sort) => (dispatch) => {
+  dispatch(product_request());
+  //https://urbanladderclone.herokuapp.com/api/products   res.data.products   ?&sort=${params}
+  axios
+    .get(
+      !params
+        ? `https://urbanladderclone.herokuapp.com/api/products`
+        : `https://urbanladderclone.herokuapp.com/api/products${params}&sort=${sort}`
+    )
+    .then((res) => {
+      console.log(res);
+      dispatch(product_success(res.data.products));
+    })
+    .catch((res) => {
+      dispatch(product_failure());
+    });
+};

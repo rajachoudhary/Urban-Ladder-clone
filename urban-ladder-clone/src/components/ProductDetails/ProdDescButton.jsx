@@ -23,7 +23,7 @@ export const ProdDescButton = ({ el, selected, setSelect }) => {
           type="checkbox"
           variant="outline-secondary"
           value="1"
-          onClick={() => setSelect(el)}
+          onClick={() => setSelect((prev) => el)}
         >
           {el}
         </ToggleButton>
