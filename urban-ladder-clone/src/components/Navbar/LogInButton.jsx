@@ -42,6 +42,7 @@ export const LogInButton = ({ id, open, anchorEl, onClose }) => {
             {token === "" ? (
               <>
                 <ListItemButton
+                  className={styles.blockNav}
                   onClick={() => {
                     setModalShow(true);
                     setLogin(true);
@@ -54,6 +55,7 @@ export const LogInButton = ({ id, open, anchorEl, onClose }) => {
                   <ListItemText primary="Log In" />
                 </ListItemButton>
                 <ListItemButton
+                  className={styles.blockNav}
                   onClick={() => {
                     setModalShow(true);
                     setLogin(false);
@@ -68,6 +70,7 @@ export const LogInButton = ({ id, open, anchorEl, onClose }) => {
             ) : (
               <>
                 <ListItemButton
+                  className={styles.blockNav}
                   onClick={() => {
                     onClose();
                   }}
@@ -78,6 +81,7 @@ export const LogInButton = ({ id, open, anchorEl, onClose }) => {
                   <ListItemText primary="Profile" />
                 </ListItemButton>
                 <ListItemButton
+                  className={styles.blockNav}
                   onClick={() => {
                     onClose();
                   }}
@@ -87,6 +91,7 @@ export const LogInButton = ({ id, open, anchorEl, onClose }) => {
                   <ListItemText primary="Orders" />
                 </ListItemButton>
                 <ListItemButton
+                  className={styles.blockNav}
                   onClick={() => {
                     onClose();
                   }}
@@ -96,6 +101,7 @@ export const LogInButton = ({ id, open, anchorEl, onClose }) => {
                   <ListItemText primary="Vouchers" />
                 </ListItemButton>
                 <ListItemButton
+                  className={styles.blockNav}
                   onClick={() => {
                     logoutApi()(dispatch);
                     onClose();

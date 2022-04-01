@@ -127,3 +127,6 @@
   text-transform: capitalize;
   font-weight: bold;
 }
+.blockNav {
+  display: block !important;
+}
