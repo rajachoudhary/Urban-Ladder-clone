@@ -41,7 +41,7 @@ export default function Cart() {
 
   const handleDel = () => {};
   const handleCheckoutCart = () => {
-    navigate("/address");
+    navigate("/cart/address");
   };
   const handleContinueShopping = () => {
     navigate("/products");
