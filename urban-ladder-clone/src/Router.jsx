@@ -17,10 +17,11 @@ export const Router = () => {
           </Route>
         </Route>
         <Route path="/productDetail/:id" element={<ProductDetails/>}></Route>
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/address" element={<Address />}>
+        <Route path="/cart" element={<Cart />} >
         </Route>
-          <Route path="/payment" element={<Payment />} />
+            <Route path="/cart/address" element={<Address />}/>
+            <Route path="/cart/address/payment" element={<Payment />} />
+
       </Routes>
     </div>
   );
