@@ -130,3 +130,8 @@
 .blockNav {
   display: block !important;
 }
+.err {
+  font-size: 12px;
+  color: red;
+  margin-top: -5px;
+}
