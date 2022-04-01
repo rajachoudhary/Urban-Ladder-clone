@@ -45,7 +45,7 @@ export const All_Product = () => {
 
 
   const handleFilter = (logic) => {
-    console.log("logic", logic);
+   // console.log("logic", logic);
     if (logic == "lowToHigh") {
       dispatch(allProductApi(1));
     }
@@ -59,7 +59,7 @@ export const All_Product = () => {
   };
 
   useEffect(() => {
-    dispatch(allProductApi());
+    dispatch(allProductApi({search,sort:1}));
   }, []);
 
   useEffect(() => {

@@ -21,7 +21,7 @@ export const MiddleNavbar = () => {
     // getData()
     console.log(data);
     navigate(`/products?category=${query}`);
-    setQuery("");
+   // setQuery("");
   };
 
   const handleClick = (event) => {

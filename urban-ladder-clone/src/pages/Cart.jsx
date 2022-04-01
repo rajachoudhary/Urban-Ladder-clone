@@ -26,7 +26,7 @@ export default function Cart() {
         }
       )
       .then((res) => {
-        console.log(res.data.cart)
+       // console.log(res.data.cart)
         setCartItems(res.data.cart)
       })
       
@@ -34,18 +34,45 @@ export default function Cart() {
         console.log(err)
       })
     }
-  useEffect(() => {
-    getCart()
+ 
+  const handleDel = (_id) => {
+    console.log("u",_id)
+    axios.delete(`https://urbanladderclone.herokuapp.com/api/cart/order/${_id}`)
+    .then((res)=>{
+      console.log(res)
+      getCart();
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
 
-  }, []);
-
-  const handleDel = () => {};
+  };
   const handleCheckoutCart = () => {
     navigate("/cart/address");
   };
   const handleContinueShopping = () => {
     navigate("/products");
   };
+
+
+  //total price
+const total_price = cartItems.reduce((acc,current)=>{
+return(
+acc+current.product.priceSort*current.quantity
+)
+},0)
+
+const total_discount = cartItems.reduce((acc,current)=>{
+return(
+acc+Number(current.product.discount_price.split(",").join("").split("").slice(1).join(""))*current.quantity
+)
+},0)
+useEffect(() => {
+  getCart()
+
+},[]);
+
+
 
   return (
     <div className={styles.cart}>
@@ -112,7 +139,7 @@ export default function Cart() {
                 <div className={styles.cartdata}>
                   {data.price}
                   <div className={styles.delbtn}>
-                    <button onClick={handleDel}>X</button>
+                    <button onClick={()=>{handleDel(data._id)}}>X</button>
                   </div>
                 </div>
               </div>
@@ -171,7 +198,7 @@ export default function Cart() {
 
         <div>
           <div className={styles.billhead}>Apply Coupon/Voucher</div>
-          <Totalamt />
+          <Totalamt total_price={total_price} total_discount={total_discount}/>
           <div>
             <button onclick={handleContinueShopping} className={styles.backbtn}>
               CONTINUE SHOPPING
