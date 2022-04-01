@@ -1,6 +1,27 @@
 import axios from "axios";
-import { product_failure, product_request, product_success } from "./product.action";
+import {
+  product_failure,
+  product_request,
+  product_success,
+} from "./product.action";
 
+
+export const addCartApi = (id, token) => {
+  axios
+    .post(
+      "https://urbanladderclone.herokuapp.com/api/cart",
+      {
+        quantity: 1,
+        product: id,
+      },
+      {
+        headers: {
+          accesstoken: "Bearer " + token,
+        },
+      }
+    )
+    .then((res) => res.json());
+};
 export const allProductApi = (params,sort)=>(dispatch)=>{
     
   
