@@ -29,10 +29,6 @@ export default function AddressForm() {
 
       <Nav />
 
-      {/* stepper */}
-
-      <stepper className="stepper"></stepper>
-
       {/* body */}
       <div className={styles.maindiv}>
         <div className={styles.sec}>
@@ -62,7 +58,7 @@ export default function AddressForm() {
               </div>
               <div className={styles.inpt}>
                 <input
-                  type="password"
+                  type="text"
                   name="pin"
                   maxlength="6"
                   pattern="[0-9]{6}"
@@ -81,7 +77,6 @@ export default function AddressForm() {
               <div className={styles.inpt}>
                 <textarea
                   name="Address"
-                  maxlength="100"
                   placeholder="Address"
                 ></textarea>
               </div>

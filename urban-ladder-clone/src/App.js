@@ -23,6 +23,8 @@ function App() {
     <div className="App">
        <Navbar/> 
        <Router/> 
+       {/* <Address/> */}
+       {/* <Payment/> */}
     </div>
   );
 }
