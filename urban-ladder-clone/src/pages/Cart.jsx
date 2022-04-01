@@ -1,11 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
-
+import axios from "axios"
 import styles from "../css/cart.module.css";
 import Nav from "../components/subcomponents/Nav";
 import Totalamt from "../components/subcomponents/Totalamt";
-import { Outlet, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function Cart() {
@@ -176,7 +175,6 @@ export default function Cart() {
           </div>
         </div>
       </div>
-      <Outlet/>
     </div>
   );
 }

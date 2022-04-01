@@ -1,0 +1,228 @@
+.productdetail {
+  margin: 0vh 10vw;
+}
+.productTitle1 {
+  color: #999;
+  font-size: 15px;
+}
+.link {
+  color: #999;
+}
+.link:hover {
+  color: #ed7745;
+  text-decoration: underline !important;
+}
+.productTitle2 h1 {
+  padding: 24px 0 6px 0;
+  font-family: "Mrs Eaves XL Serif", serif;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #2f4858;
+  text-transform: capitalize;
+  margin-bottom: 0px;
+}
+.productTitle2 p {
+  color: #999999;
+  font-size: 13px;
+  text-align: center;
+  margin: 0px;
+}
+.productDescRight {
+  width: 30%;
+  margin-left: 70px;
+}
+.productDescRightWishlistCompare {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 5px;
+}
+.textIcon {
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 15px;
+  color: #999999;
+}
+.icon {
+  color: #ed7745;
+  cursor: pointer;
+  font-size: 22px;
+  vertical-align: middle;
+}
+.Wishlist {
+  display: inline-block;
+  border-right: 1px solid #999999;
+  width: 48%;
+  cursor: pointer;
+}
+.Wishlist1 {
+  display: inline-block;
+  margin-left: 5px;
+  width: 48%;
+  cursor: pointer;
+}
+.discount {
+  position: relative;
+  margin-top: -6px;
+}
+.discount img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+.discAmt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 12px 0 10px 25px;
+  color: #2e4757;
+}
+.discDisclaim {
+  font-size: 11px;
+  line-height: 1em;
+  text-transform: initial;
+  padding: 2px 2px 0px 2px;
+  text-align: justify;
+}
+.prodDescB {
+  display: inline-block;
+}
+.buttonSize {
+  font-size: 13px !important;
+  color: #999999 !important;
+  margin-right: 4px;
+  box-shadow: none !important;
+}
+.buttonSize:hover {
+  background-color: #fafafa !important;
+  color: #999999 !important;
+}
+.headerDesc {
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: -2px;
+}
+.priceDesc {
+  padding: 5px 0;
+  margin: 10px 0px;
+  font-size: 16px;
+}
+.priceFlex {
+  display: flex;
+}
+.exactPrice {
+  color: #969696;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  line-height: 24px;
+}
+.exactAmt {
+  text-decoration: line-through;
+  display: inline-block;
+}
+.discPrice {
+  margin-left: 10px;
+}
+.discPriceAmt {
+  padding-top: 2px;
+  font-size: 25px;
+  font-weight: 400;
+  word-spacing: 6px;
+  color: #212121;
+  text-align: center;
+  line-height: 24px;
+}
+.inclusive {
+  color: #969696;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 13px;
+  margin-top: 2px;
+}
+.emi {
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  padding: 0;
+  margin-top: 20px;
+  margin-left: -9px;
+  background-color: #ffffff;
+}
+.knowLink {
+  color: #ed7745;
+  font-size: 12px;
+  text-decoration: underline;
+}
+.addCart {
+  margin: 15px 5px;
+  width: 100%;
+  letter-spacing: 2px;
+  background-color: #ed7745;
+  padding: 10px 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px !important;
+}
+.warranty {
+  display: flex;
+  font-size: 15px;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+  align-items: center;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 3px;
+  border: 1px solid #d6d1b1;
+}
+.warranty b {
+  font-weight: 500;
+}
+.location {
+  padding: 7px 3px 5px 3px;
+  font-weight: 600;
+  height: 35px;
+  font-size: 14px;
+  line-height: 20px;
+  border: 1px solid #d6d1b1;
+  margin-top: 10px;
+}
+.place {
+  line-height: 1.2;
+  padding-left: 10px !important;
+}
+.change {
+  color: #ed7745;
+  float: right;
+  margin-right: 10px;
+  text-decoration: underline;
+}
+.deliver {
+  padding: 7px 3px 5px 3px;
+  height: 35px;
+  font-size: 14px;
+  line-height: 20px;
+  border: 1px solid #d6d1b1;
+  border-top: none;
+}
+.deliverList {
+  padding: 7px;
+  padding-left: 35px;
+  margin: 0 !important;
+  min-height: 35px;
+  background: #fdfbe0;
+  border: 1px solid #d6d1b1;
+  border-top: none;
+  font-size: 12px;
+  list-style-position: outside;
+}
