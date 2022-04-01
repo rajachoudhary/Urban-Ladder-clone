@@ -7,11 +7,17 @@ import { ProductCard } from './ProductCard';
 import styles from "./all_product.module.css";
 import { Filter } from './filter/Filter';
 import { PopularSlider } from '../LandingPage/PopularSlider';
+import { TopFooter } from '../LandingPage/Footer/TopFooter';
+import { MiddleFooter } from '../LandingPage/Footer/MiddleFooter';
+import { BottomFooter } from '../LandingPage/Footer/BottomFooter';
+import {useLocation} from "react-router-dom";
+import style from "../../css/paragraph.module.css";
 
 export const All_Product = () => {
  
   const {all_product} = useSelector((state)=>state.allproduct_reducer )
- 
+ const {search} = useLocation();
+ console.log("query",search)
     const [list,setList] = useState(all_product);
    // console.log("list",list)
     const [selectedPrice, setSelectedPrice] = useState([500, 100000]);
@@ -41,10 +47,10 @@ export const All_Product = () => {
     const handleFilter = (logic)=>{
       console.log("logic",logic)
       if(logic =="lowToHigh"){
-        dispatch(allProductApi(1))
+        dispatch(allProductApi(search,1))
       }
       if(logic == "highToLow"){
-        dispatch(allProductApi(-1))
+        dispatch(allProductApi(search,-1))
       }
 
     }
@@ -54,7 +60,7 @@ export const All_Product = () => {
     };
    
     useEffect(()=>{
-      dispatch(allProductApi())
+      dispatch(allProductApi(search,1))
      
    
   },[])
@@ -131,7 +137,16 @@ export const All_Product = () => {
   
     </div>
     <div>
+
       <PopularSlider/>
+      <div className={style.heading}>SIGN UP AND GET A CHANCE TO WIN THE GIVEAWAY OF THE WEEK.</div>
+      <div className={style.inputContainer}>
+          <input placeholder="Your Email ID"/>
+          <button>SUBSCRIBE</button>
+      </div>
+      <TopFooter/>
+      <MiddleFooter/>
+      <BottomFooter/>
     </div>
   
     </>
