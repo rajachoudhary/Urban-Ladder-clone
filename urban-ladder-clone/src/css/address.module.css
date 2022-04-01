@@ -1,0 +1,139 @@
+.address{
+    width: 70%;
+    margin: auto;
+}
+.maindiv{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5%;
+}
+.sec{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.upperhead{
+    height: 30px;
+    font-size: 16px;
+    font-weight: 450;
+    border-bottom: 1px solid #ccc;
+}
+.adrsform{
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.gst{
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.gstinpt{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10%;
+    font-weight: 200;
+}
+.gstinpt>div{
+    font-size: 16px;
+}
+.gstinpt>input{
+    width: 50%;
+    height:30px;
+    border-color: #ccc;
+}
+.gst>div+div{
+    color: #ccc;
+    font-size: 10px;
+}
+.adrsinput{
+    display: flex;
+    flex-direction: row;
+    font-size:12px;
+    column-gap: 20%;
+}
+.adrsinput>div{
+    width: 35%;
+}
+.adrsinput>div+div{
+    width: 65%;
+}
+.adrsform>div:nth-child(7)>div+div{
+    
+    display: flex;
+    flex-direction: row;
+}
+.code{
+    width: 10%;
+    height: 20px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+}
+
+.star {
+    color: red;
+    font-size: 12px;
+}
+
+
+
+/* cartlist div */
+.heading{
+    width: 98%;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    margin: auto;
+    padding: 3px 0px;
+    display: flex;
+    font-size: 9px;
+    flex-direction: row;
+    column-gap: 10%;
+}
+.adrsprod{
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20%;
+}
+.adrsProdimg{
+    width: 40px;
+    height: 40px;
+}
+.detailsDiv>div+div{
+    display: inline;
+}
+.midsec{
+    display: flex;
+    width: 30%;
+    height: 50px;
+    padding: 10px;
+    flex-direction: row;
+    column-gap: 15%;
+    border: 1px solid #ccc;
+
+}
+.midsec>div{
+    font-size:15px;
+    width:35%
+}
+.midsec>div+div{
+    width: 50%;
+    margin-top: 3px;
+    font-size:12px;
+    display: flex;
+    flex-direction: row;
+}
+.sec>button{
+    width:65%;
+    height: 35px;
+    color: #fff;
+    background-color: #ed7745;
+    border: none;
+    border-radius: 3px
+}

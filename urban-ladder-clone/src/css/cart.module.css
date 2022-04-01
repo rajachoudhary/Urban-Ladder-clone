@@ -1,0 +1,99 @@
+/* mainpage */
+.cart{
+    width: 70%;
+    margin: auto;
+}
+
+  /* offer */
+.offer{
+    background-color: rgb(227,247,231);
+    padding: 1px 0px;
+    font-size: 12px;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+/* heading */
+.heading{
+    width: 98%;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    margin: auto;
+    padding: 10px 0px;
+    display: flex;
+    font-size: 12px;
+    flex-direction: row;
+    column-gap: 10%;
+}
+.headdata{
+    width: 10%;
+}
+.cartprod{
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+.cartdata{
+    display: flex;
+    width: 10%;
+    flex-direction: row;
+    margin-top: 60px;
+    font-size: 15px;
+}
+.cartdata>select{
+    height: 18px;
+}
+.delbtn{
+    margin-left: 50%;
+}
+.delbtn>button{
+    font-size: 15px;
+    border: none;
+    background-color: white;
+    color: #ed7745;
+}
+.billingsec{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    column-gap: 40%;
+}
+.billingsec>div+div{
+    width: 30%;
+}
+.imgsec{
+    width:40%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+}
+.payimg{
+    width:50px;
+    height:15px;
+}
+
+.billhead{
+    color: #ed7745;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.backbtn{
+    border: none; 
+    width: 50%;
+    background-color: #fff;
+    height: 30px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #ed7745;
+}
+.nextbtn{
+    border: none; 
+    border-radius: 3px;
+    width: 50%;
+    color: #fff;
+    height: 30px;
+    margin-top: 10px;
+    font-size: 12px;
+    background-color: #ed7745;
+}
