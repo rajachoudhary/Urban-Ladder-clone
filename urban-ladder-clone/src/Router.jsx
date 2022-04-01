@@ -19,8 +19,8 @@ export const Router = () => {
         <Route path="/productDetail/:id" element={<ProductDetails/>}></Route>
         <Route path="/cart" element={<Cart />} />
         <Route path="/address" element={<Address />}>
-          <Route path="/payment" element={<Payment />} />
         </Route>
+          <Route path="/payment" element={<Payment />} />
       </Routes>
     </div>
   );
