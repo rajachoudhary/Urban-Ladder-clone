@@ -1,13 +1,26 @@
 .size{
     display: flex;
     align-items: center;
-    gap : 10px;
+    gap : 10px; 
     cursor : pointer;
-    margin: 1vh 2vh;
+    margin: 1vh 2vh; 
+}
+.size_brand{
+    display: flex;
+    align-items: center;
+    
+    cursor : pointer;
+    margin-top: -1vh;
+}
+.size_brand p{
+    margin: 0;
+    margin-left: -2vh;
+    
 }
 
 .size >p{
     margin: 0;
+    
 }
 .price_main{
     overflow-y: scroll;
