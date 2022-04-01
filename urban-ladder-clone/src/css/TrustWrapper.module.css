@@ -1,0 +1,65 @@
+.TrustWrapper {
+  margin-top: 20px;
+  background-color: #f9fafa;
+  text-align: center;
+}
+.TrustWrapper div:nth-child(1) {
+  font-family: Georgia-Italic;
+  font-size: 16px;
+  color: #222222;
+  letter-spacing: 0px;
+  margin: 0;
+  margin: 0 auto;
+  max-width: 990px;
+  padding: 20px 30px 10px 30px;
+}
+.TrustWrapper div:nth-child(2) {
+  font-size: 13px;
+  color: #494848;
+  padding: 10px 10px 20px 10px;
+}
+.division {
+  margin: 30px;
+  border-bottom: 1px solid #eaeced;
+}
+.knowMore {
+  color: #f9913d;
+}
+.benefits {
+  display: flex;
+  margin-top: 30px;
+}
+.benefits > div {
+  width: 50%;
+  text-align: center;
+}
+.icon {
+  font-size: 50px;
+  line-height: 1;
+  color: #b98c61;
+  margin-bottom: 30px;
+}
+.content {
+  position: relative;
+  margin: 0 auto;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
+}
+.separator {
+  border-top: 1px solid #999;
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 5px;
+  padding-bottom: 5px;
+}
+.msg {
+  color: #999;
+  font-size: 13px;
+  line-height: 1;
+  margin: auto;
+  padding: 0px;
+}
