@@ -20,8 +20,10 @@ export const loginApi = (params) => (dispatch) => {
       console.log(res);
       dispatch(USER_success(res.data.token));
     })
-    .catch((res) => {
-      dispatch(USER_failure());
+    .catch(function (error) {
+      if (error.response) {
+        dispatch(USER_failure(error.response.data));
+      }
     });
 };
 export const registerApi = (params) => (dispatch) => {
@@ -35,8 +37,10 @@ export const registerApi = (params) => (dispatch) => {
       console.log("login", res);
       dispatch(USER_success(res.data.token));
     })
-    .catch((res) => {
-      dispatch(USER_failure());
+    .catch(function (error) {
+      if (error.response) {
+        dispatch(USER_failure(error.response.data));
+      }
     });
 };
 export const logoutApi = (params) => (dispatch) => {

@@ -18,9 +18,10 @@ export const USER_success = (payload) => {
   };
 };
 
-export const USER_failure = () => {
+export const USER_failure = (payload) => {
   return {
     type: USER_FAILURE,
+    payload: payload,
   };
 };
 

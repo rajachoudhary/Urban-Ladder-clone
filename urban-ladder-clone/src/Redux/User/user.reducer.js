@@ -9,6 +9,7 @@ import {
 const initState = {
   isLoading: false,
   isError: false,
+  message: "",
   token: "" || localStorage.getItem("accesstoken"),
 };
 
@@ -27,13 +28,16 @@ export const User_reducer = (state = initState, { type, payload }) => {
         token: payload,
         isLoading: false,
         isError: false,
+        message: "",
       };
 
     case USER_FAILURE:
+      console.log(payload);
       return {
         ...state,
         isLoading: false,
         isError: true,
+        message: payload,
       };
     case USER_LOGOUT: {
       localStorage.setItem("accesstoken", "");
