@@ -17,7 +17,7 @@ export default function AddressForm() {
 
   const handleContinue = () => {
     //   if (.email) {   
-          navigate("/payment");
+          navigate("/card/address/payment");
     //   }
     //   else {
     //     alert("Please fill your personal details")
