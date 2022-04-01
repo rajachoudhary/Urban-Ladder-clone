@@ -1,76 +1,67 @@
-import axios from 'axios';
-import React from 'react'
-import { useEffect,useState } from 'react';
-import { useDispatch,useSelector } from 'react-redux';
-import { allProductApi } from '../../Redux/Allproduct/productApi';
-import { ProductCard } from './ProductCard';
+import axios from "axios";
+import React from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { allProductApi } from "../../Redux/Allproduct/productApi";
+import { ProductCard } from "./ProductCard";
 import styles from "./all_product.module.css";
-import { Filter } from './filter/Filter';
-import { PopularSlider } from '../LandingPage/PopularSlider';
+import { Filter } from "./filter/Filter";
+import { PopularSlider } from "../LandingPage/PopularSlider";
 
 export const All_Product = () => {
- 
-  const {all_product} = useSelector((state)=>state.allproduct_reducer )
- 
-    const [list,setList] = useState(all_product);
-   // console.log("list",list)
-    const [selectedPrice, setSelectedPrice] = useState([500, 100000]);
-    const [brands, setBrands] = useState([
-      { id: 1, checked: false, label: 'By Dreamzz Furniture' },
-      { id: 2, checked: false, label: 'By Urban Ladder' },
-      { id: 3, checked: false, label: 'By Wood Edge' },
-      { id: 4, checked: false, label: 'By Vintej Home' },
-      { id: 5, checked: false, label: 'By Intercraft' },
-      { id: 6, checked: false, label: 'By Durian' },
-      { id: 7, checked: false, label: 'By @Home' },
-      { id: 8, checked: false, label: 'By BLACKSMITH STREET' },
-     
-    ]);
-    const dispatch = useDispatch();
-    const handleChangeChecked = (id) => {
-      {console.log("utk1",id)}
-      const brandsStateList = brands;
-      const changeCheckedBrands = brandsStateList.map((item) =>
-        item.id === id ? { ...item, checked: !item.checked } : item
-      );
-      setBrands(changeCheckedBrands);
-    };
-  
+  const { all_product } = useSelector((state) => state.allproduct_reducer);
 
-
-    const handleFilter = (logic)=>{
-      console.log("logic",logic)
-      if(logic =="lowToHigh"){
-        dispatch(allProductApi(1))
-      }
-      if(logic == "highToLow"){
-        dispatch(allProductApi(-1))
-      }
-
+  const [list, setList] = useState(all_product);
+  // console.log("list",list)
+  const [selectedPrice, setSelectedPrice] = useState([500, 100000]);
+  const [brands, setBrands] = useState([
+    { id: 1, checked: false, label: "By Dreamzz Furniture" },
+    { id: 2, checked: false, label: "By Urban Ladder" },
+    { id: 3, checked: false, label: "By Wood Edge" },
+    { id: 4, checked: false, label: "By Vintej Home" },
+    { id: 5, checked: false, label: "By Intercraft" },
+    { id: 6, checked: false, label: "By Durian" },
+    { id: 7, checked: false, label: "By @Home" },
+    { id: 8, checked: false, label: "By BLACKSMITH STREET" },
+  ]);
+  const dispatch = useDispatch();
+  const handleChangeChecked = (id) => {
+    {
+      console.log("utk1", id);
     }
-   
-    const handleChangePrice = (event, value) => {
-      setSelectedPrice(value);
-    };
-   
-    useEffect(()=>{
-      dispatch(allProductApi())
-     
-   
-  },[])
-  
-    useEffect(()=>{
-    
-      setList(all_product)
-   
-  },[all_product])
+    const brandsStateList = brands;
+    const changeCheckedBrands = brandsStateList.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+    setBrands(changeCheckedBrands);
+  };
+
+  const handleFilter = (logic) => {
+    console.log("logic", logic);
+    if (logic == "lowToHigh") {
+      dispatch(allProductApi(1));
+    }
+    if (logic == "highToLow") {
+      dispatch(allProductApi(-1));
+    }
+  };
+
+  const handleChangePrice = (event, value) => {
+    setSelectedPrice(value);
+  };
+
+  useEffect(() => {
+    dispatch(allProductApi());
+  }, []);
+
+  useEffect(() => {
+    setList(all_product);
+  }, [all_product]);
 
   const applyFilters = () => {
-    
-
-   let updatedList = all_product
-   //category brand
-   const brandsChecked = brands
+    let updatedList = all_product;
+    //category brand
+    const brandsChecked = brands
       .filter((item) => item.checked)
       .map((item) => item.label);
 
@@ -83,14 +74,9 @@ export const All_Product = () => {
     const minPrice = selectedPrice[0];
     const maxPrice = selectedPrice[1];
 
-      updatedList = updatedList.filter(
-      (item) => {
-        return(
-         
-          item.priceSort >= minPrice && item.priceSort <= maxPrice
-        )
-      }
-    );
+    updatedList = updatedList.filter((item) => {
+      return item.priceSort >= minPrice && item.priceSort <= maxPrice;
+    });
 
     setList(updatedList);
 
@@ -99,42 +85,31 @@ export const All_Product = () => {
 
   useEffect(() => {
     applyFilters();
-  }, [selectedPrice,brands]);
+  }, [selectedPrice, brands]);
 
-  
   return (
     <>
-    <div style={{width :"1000px", margin:"auto"}}>
-    <div className={styles.top_bed_image}><img src="/Images/bed.png"/></div>
-    <Filter
-     handleFilter={handleFilter }   
-     selectedPrice={selectedPrice} 
-     changedPrice={handleChangePrice}
-     brands={brands}
-     handleChangeChecked={handleChangeChecked}
-     />
-    <div className={styles.prod_main}>
-     
- 
-      {list.map((item)=>{ 
-          
-        return(
-       
-          <ProductCard key={item.id} item={item}/>
-          
-        )
-      })},
-      
-     
-    </div>
-
-  
-    </div>
-    <div>
-      <PopularSlider/>
-    </div>
-  
+      <div style={{ width: "1000px", margin: "auto" }}>
+        <div className={styles.top_bed_image}>
+          <img src="/Images/bed.png" />
+        </div>
+        <Filter
+          handleFilter={handleFilter}
+          selectedPrice={selectedPrice}
+          changedPrice={handleChangePrice}
+          brands={brands}
+          handleChangeChecked={handleChangeChecked}
+        />
+        <div className={styles.prod_main}>
+          {list.map((item) => {
+            return <ProductCard key={item.id} item={item} />;
+          })}
+          ,
+        </div>
+      </div>
+      <div>
+        <PopularSlider />
+      </div>
     </>
-   
-  )
-}
+  );
+};
