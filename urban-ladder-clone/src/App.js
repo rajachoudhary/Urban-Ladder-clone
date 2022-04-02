@@ -27,6 +27,8 @@ function App() {
       }
      
        <Router/> 
+       {/* <Address/> */}
+       {/* <Payment/> */}
     </div>
   );
 }

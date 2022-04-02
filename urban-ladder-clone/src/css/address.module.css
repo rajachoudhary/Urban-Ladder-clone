@@ -38,14 +38,14 @@
 .gstinpt{
     display: flex;
     flex-direction: row;
-    column-gap: 10%;
+    column-gap: 25px;
     font-weight: 200;
 }
 .gstinpt>div{
     font-size: 16px;
 }
 .gstinpt>input{
-    width: 50%;
+    width: 40%;
     height:30px;
     border-color: #ccc;
 }
@@ -64,15 +64,25 @@
 }
 .adrsinput>div+div{
     width: 65%;
+    border: 1px solid #ccc;
 }
-.adrsform>div:nth-child(7)>div+div{
-    
+.adrsform>div:nth-child(7)>div+div{   
     display: flex;
     flex-direction: row;
 }
+.adrsform>div:nth-child(7)>div+div>div+div>input{   
+    border-style: none !important;
+}
+.adrsinput>div+div>input{
+    border-style: none !important;
+}
+.adrsinput>div+div>textarea{
+    border-style: none !important;
+}
+
 .code{
-    width: 10%;
-    height: 20px;
+    width: 15%;
+    height: 25px;
     background-color: #ccc;
     border: 1px solid #ccc;
 }
@@ -111,7 +121,7 @@
 .midsec{
     display: flex;
     width: 30%;
-    height: 50px;
+    height: 55px;
     padding: 10px;
     flex-direction: row;
     column-gap: 15%;
@@ -120,10 +130,10 @@
 }
 .midsec>div{
     font-size:15px;
-    width:35%
+    width:40%;
 }
 .midsec>div+div{
-    width: 50%;
+    width: 60%;
     margin-top: 3px;
     font-size:12px;
     display: flex;
