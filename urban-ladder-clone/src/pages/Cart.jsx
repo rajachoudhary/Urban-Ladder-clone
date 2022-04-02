@@ -113,7 +113,7 @@ useEffect(() => {
         
           {cartItems.map((product) => {
             const {product:data} = product;
-            {console.log("qw",data.id)}
+            // {console.log("qw",data.id)}
             return (
               <div key={data.id} className={styles.heading}>
                 <div className={styles.cartprod}>

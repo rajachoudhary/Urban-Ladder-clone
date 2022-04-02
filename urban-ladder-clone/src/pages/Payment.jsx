@@ -6,19 +6,15 @@ import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function PaymentForm() {
+  const navigate = useNavigate()
   const handleOrder = () => {
-    //should be done with local storage
-
-    
-    // if (card.fname && card.email && card.address && card.number ) {
-    //   alert("Order Placed");
-    //   navigate("/");
-    // }
-    // else{
-    //   alert("Please fill your card details")
-    // }
+  
+    alert("Order Placed");
+    navigate("/");
+  
   };
 
   return (

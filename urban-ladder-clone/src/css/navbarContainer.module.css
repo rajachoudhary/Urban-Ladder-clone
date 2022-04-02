@@ -1,0 +1,6 @@
+.navbarContainer{
+    position: sticky;
+    top: -120px;
+    z-index: 100;
+    background-color: white;
+}

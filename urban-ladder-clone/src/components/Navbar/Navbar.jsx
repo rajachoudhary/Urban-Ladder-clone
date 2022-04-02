@@ -6,10 +6,10 @@ import { BottomNavbar } from "./BottomNavbar";
 import { LogInButton } from "./LogInButton";
 import { MiddleNavbar } from "./MiddleNavbar";
 import { TopNavbar } from "./TopNavbar";
-
+import style from "../../css/navbarContainer.module.css"
 export const Navbar = () => {
   return (
-    <div>
+    <div className={style.navbarContainer}>
       <TopNavbar />
       <MiddleNavbar />
       <BottomNavbar />

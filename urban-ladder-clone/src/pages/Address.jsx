@@ -4,16 +4,46 @@ import Nav from "../components/subcomponents/Nav";
 import Totalamt from "../components/subcomponents/Totalamt";
 import styles from "../css/address.module.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
+import { useSelector } from "react-redux";
 
 export default function AddressForm() {
   const navigate = useNavigate();
   const [cartItems, setCartItems] = useState([]);
+  const { token } = useSelector((state) => state.User);
   useEffect(() => {
-    fetch(`https://urbanladderclone.herokuapp.com/api/cart`)
-      .then((res) => res.json())
-      .then((data) => setCartItems(data));
+    axios
+    .get(
+      "https://urbanladderclone.herokuapp.com/api/cart",
+      
+      {
+        headers: {
+          accesstoken: "Bearer " + token,
+        },
+      }
+    )
+    .then((res) => {
+     // console.log(res.data.cart)
+      setCartItems(res.data.cart)
+    })
+    
+    .catch((err)=>{
+      console.log(err)
+    })
   }, []);
 
+  const total_price = cartItems.reduce((acc,current)=>{
+    return(
+    acc+current.product.priceSort*current.quantity
+    )
+    },0)
+    
+    const total_discount = cartItems.reduce((acc,current)=>{
+    return(
+    acc+Number(current.product.discount_price.split(",").join("").split("").slice(1).join(""))*current.quantity
+    )
+    },0)
   const handleContinue = () => {
     //   if (.email) {
     navigate("/cart/address/payment");
@@ -168,20 +198,21 @@ export default function AddressForm() {
         <div className={styles.sec}>
           <div className={styles.upperhead}>Order Summery</div>
           <div>
-            {cartItems.map((data) => {
+            {cartItems.map((product) => {
+              const {product:data} = product;
               return (
                 <div key={data.id} className={styles.heading}>
                   <div className={styles.adrsprod}>
                     <div className={styles.imageDiv}>
                       <img
                         className={styles.adrsProdimg}
-                        src={data.image}
+                        src={data.img}
                         alt=""
                       />
                     </div>
                     <div className={styles.detailsDiv}>
                       <div>
-                        <b>{data.name}</b>
+                        <b>{data.title}</b>
                       </div>
                       <div>{data.color}</div>
                       <div>Quantity: 1</div>
@@ -191,7 +222,8 @@ export default function AddressForm() {
               );
             })}
           </div>
-          <Totalamt />
+          <Totalamt total_price={total_price} total_discount={total_discount}/>
+
         </div>
       </div>
     </div>

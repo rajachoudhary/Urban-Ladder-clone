@@ -39,6 +39,11 @@
     margin-top: 60px;
     font-size: 15px;
 }
+.imageDiv>img{
+    /* border: 1px solid black; */
+    width: 100px;
+    height: 100px;
+}
 .cartdata>select{
     height: 18px;
 }
