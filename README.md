@@ -5,7 +5,7 @@ Urban Ladder, an online furniture store, is home to exceptional furniture option
 <ol >
 <li>
  <h3>Landing Page</h3><br>
-<img  align="center" src="project_images/Landing.jpg" alt="Landing Page" >
+<img  align="center" src="project_images/Landing.jpeg" alt="Landing Page" >
 </li>
 <li>
 <h3>SignUp Page</h3><br>
